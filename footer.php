@@ -19,7 +19,7 @@
             <?php endif; ?>
         </div>
     </div>
-    <small>&copy;&nbsp;2006&nbsp;&ndash;&nbsp;2017&nbsp;YOTTOS</small>
+    <small>&copy; 2006&nbsp;&ndash;&nbsp;<?php the_time('Y'); ?> YOTTOS</small>
 </footer>
 </body>
 </html>
