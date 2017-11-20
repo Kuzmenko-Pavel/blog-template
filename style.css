@@ -6652,7 +6652,7 @@ input[type="file"] {
       margin: 0 -15px 20px; } }
   .article__thumb img,
   .main__thumb img {
-    max-width: 100%;
+    width: 100%;
     max-height: 450px;
     display: block;
     margin: 0 auto; }
