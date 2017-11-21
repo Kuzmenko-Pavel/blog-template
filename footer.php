@@ -20,10 +20,10 @@
         </div>
     </div>
     <small>&copy; 2006&nbsp;&ndash;&nbsp;<?php the_time('Y'); ?> YOTTOS</small>
-    <script type="text/javascript"
-            src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a1406ddabb43708"></script>
 </footer>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a1406ddabb43708"></script>
 </body>
 </html>
