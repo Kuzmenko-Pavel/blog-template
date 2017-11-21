@@ -21,5 +21,7 @@
     </div>
     <small>&copy; 2006&nbsp;&ndash;&nbsp;<?php the_time('Y'); ?> YOTTOS</small>
 </footer>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59a54843fcb9fac6"></script>
 </body>
 </html>
