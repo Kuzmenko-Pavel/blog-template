@@ -19,7 +19,9 @@
             <?php endif; ?>
         </div>
     </div>
-    <small>&copy; 2006&nbsp;&ndash;&nbsp;<?php the_time('Y'); ?> YOTTOS</small>
+    <small>&copy;&nbsp;2006&nbsp;&ndash;&nbsp;2017&nbsp;YOTTOS</small>
 </footer>
+<?php wp_footer(); ?>
 </body>
+
 </html>

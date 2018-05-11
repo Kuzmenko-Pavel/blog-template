@@ -1,0 +1,82 @@
+
+.subscription {
+
+    #subscriptionDrop{
+        position: fixed;
+        transform: translateY(-50%) rotate(-90deg);
+        right: -65px;
+        width: 190px;
+        top: 50%;
+        transform-origin: center center;
+        white-space: nowrap;
+        z-index: 99999;
+        i, span {
+            vertical-align:middle;
+        }
+    }
+    form, #thanksSubscription {
+        width: 300px;
+        max-width:100%;
+        max-height: calc(100vh - 65px);
+        overflow:auto;
+        background:#fff;
+        position:fixed;
+        right:-300px;
+        top:50%;
+        transform:translateY(-50%);
+        z-index:9999;
+        transition:opacity .3s ease-in-out, visibility .3s ease-in-out, right .15s ease-in-out;;
+        box-shadow: 0 6px 16px 0 rgba(black, .15);
+        opacity:0;
+        visibility:hidden;
+        padding: 30px;
+        &.show{            
+            right:75px;
+            opacity:1;
+            visibility:visible;
+        }
+        .form-action {
+            padding: 15px 0 0;
+            margin: 0 -10px;
+            display:flex;
+            align-items:center;
+            justify-content:stretch;
+            button, input {
+                margin: 0 10px;
+                flex: 1 1 auto;
+            }
+        }
+        .actions-block {
+            margin: 25px auto 10px;
+            text-align: center;
+        }
+    }
+    @include b(tablet){
+        #subscriptionDrop{            
+            transform: none;
+            top: auto;
+            bottom: 5px;
+            right: 5px;
+        }
+        form, #thanksSubscription {
+            top: auto;
+            transform:none;
+            &.show{            
+                right:5px;
+                opacity:1;
+                top:auto;
+                bottom: 65px;
+                transform:none;
+                visibility:visible;
+            }
+        }
+    }
+    @include b(mobile){
+        .subscr-text {
+            display:none;
+        }
+        #subscriptionDrop{          
+            width:auto;
+        }
+    }
+}

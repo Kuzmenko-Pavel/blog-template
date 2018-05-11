@@ -157,32 +157,35 @@
     box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15);
     padding: 15px 40px 15px 30px;
     height: 70px;
-    font-size: 0;
-    line-height: 0;
     margin: 30px 0 0;
     position: relative;
-    @include clearfix;
+    display:flex;
+    flex-flow: row nowrap;
+    align-items:center;
+    justify-content:space-between;
+    left:0;
     @include b(tablet) {
         padding: 15px;
     }
     .menu {
-        display: inline-block;
-        vertical-align: middle;
-        width: calc(100% - 250px);
         @include b(tablet) {
             width: calc(100% - 200px);
         }
-        ul {
+        .menu-list {
             list-style: none;
             padding: 0;
             margin: 0;
-            text-align: right;
+            display:flex;
+            flex-flow:row wrap;
+            align-items:center;
+            justify-content:flex-end;
+            width:100%;
             li {
                 padding: 0;
-                display: inline-block;
+                flex: 0 0 auto;
                 vertical-align: middle;
                 margin-right: 34px;
-                padding: 0 3px;
+                padding: 0;
                 &:last-of-type {
                     margin-right: 0;
                 }
@@ -210,6 +213,39 @@
                             top: 7px;
                             position: relative;
                         }
+                    }
+                }
+                &.menu-item-has-children {
+                    .sub-menu {
+                        position:absolute;
+                        opacity:0;
+                        visibility:hidden;
+                        transition:all .15s ease-in-out;
+                        background:#fff;    
+                        z-index: 9999;
+                        border: 1px solid rgba(0, 0, 0, 0.15);
+                        border-radius: 4px;
+                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+                        padding:10px 0;
+                        li {
+                            display:block;
+                            text-align:center;
+                            margin: 0;
+                            padding:0;
+                        }
+                        a {
+                            color:#444;
+                            display:block;
+                            padding: 10px 15px;
+                            &:hover {
+                                background: #eee;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    &:hover .sub-menu {
+                        opacity:1;
+                        visibility:visible;
                     }
                 }
             }
@@ -263,9 +299,7 @@
         }
     }
     .search {
-        display: inline-block;
-        vertical-align: middle;
-        width: 250px;
+        flex: 0 0 250px;
         @include b(tablet) {
             width: 200px
         }

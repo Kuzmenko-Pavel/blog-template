@@ -15,38 +15,85 @@
 		            <div class="article__controls">
 		            	<span class="date"><i class="material-icons">&#xE916;</i><span><?php echo get_the_date(); ?></span></span>
 		            	<span class="views"><i class="material-icons">&#xE417;</i><span><?php echo getPostViews(get_the_ID()); ?></span></span>
-		            	<span class="comments"><i class="material-icons">&#xE24C;</i><span><?php comments_number( '0', '1', '%' ); ?></span></span>
+						<?php if ( comments_open() || get_comments_number() ) : ?><a href="#comments" class="comments"><i class="material-icons">&#xE24C;</i><span><?php comments_number( '0', '1', '%' ); ?></span></a> <?php endif;?>
 		            </div>
 
 		            <div class="article__postpone">
 		            	<span class="time-to-read"><i class="material-icons">&#xE192;</i><span>Время на чтение:</span><span class="time"><?php echo estimated_reading_time(); ?></span></span>
-		            	<a href="#" class="js-read-later">Нет времени читать?</a>
-		            	<div id="readLater">
-			            	<a href="mailto:?subject=YOTTOS | <?php the_title(); ?>&amp;body=Почитай статью <?php the_permalink(); ?>" class="to-mail"><i><img src="<?php echo get_template_directory_uri() . '/assets/images/mail.svg'?>" alt=""></i><span>На почту</span></a>
-			            	<a href="https://share.flipboard.com/bookmarklet/popout?v=2&title=<?php the_title(); ?>&url=<?php the_permalink(); ?>" class="to-flipboard" onclick="event.preventDefault(); window.open(this.href, 'Popup', 'location,status,scrollbars,resizable');"><i><img src="<?php echo get_template_directory_uri() . '/assets/images/flipboard.svg'?>" alt=""></i><span>На Flipboard</span></a>
-			            	<a href="https://getpocket.com/edit?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>" class="to-pocket"  onclick="event.preventDefault(); window.open(this.href, 'Popup', 'center,status,scrollbars,resizable)');"><i><img src="<?php echo get_template_directory_uri() . '/assets/images/pocket.svg'?>" alt=""></i><span>В Pocket</span></a>
-		            	</div>
+		            	<a href="#readLater" class="popup-link btn-default mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Нет времени читать?</a>
+						<div class="popup-wrap">
+							<form id="readLater" class="popup">
+								<a href="#" class="close-btn">&times;</a>
+								<h3>Отправить на почту</h3>
+								<div class="input-field required"> 
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<label for="email" class="mdl-textfield__label">Ваш email</label><input type="email" name="email" class="mdl-textfield__input">
+									</div>
+								</div>
+								<div class="g-recaptcha" data-sitekey="6Lc4FFgUAAAAAG8DZesnBpfuSRIE1jq3oBJKjpcu"></div><!--your site key here-->
+								<div class="actions-block">
+									<button type="submit" class="mdl-button--accent mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Отправить</button>
+								</div>		
+							</form>
+													
+							<div id="thanks" class="popup">									
+								<h3>Спасибо, что подписались</h3>									
+								<p class="text-center"><i class="material-icons" style="font-size: 48px; color:#3a5edc">&#xE86C;</i></p>
+								<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </p>
+								<div class="actions-block">
+									<a href="#" id="closeReadLater" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Закрыть</a>
+								</div>
+							</div>
+						</div>
+		            	<!-- <div id="readLater">
 
-		        		<!-- Go to www.addthis.com/dashboard to customize your tools --> 
-		        		<div class="addthis_inline_share_toolbox"></div>
-		            </div>
+			            	<a href="mailto:?subject=YOTTOS | <?php the_title(); ?>&amp;body=Почитай статью <?php the_permalink(); ?>" class="to-mail"><i><img src="<?php echo get_template_directory_uri() . '/assets/images/mail.svg'?>" alt=""></i><span>На почту</span></a>
+		            	</div> -->
+
+		        <div class="read-later-social">
+							<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" title="Share on Facebook." class="fb"></a>
+  						<a href="http://vk.com/share.php?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&noparse=true" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="vk"></a>
+							<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="gp"></a>
+							<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" class="tw"></a>
+							<a href="http://www.linkedin.com/shareArticle?mini=true&title=<?php the_title(); ?>&url=<?php the_permalink(); ?>" title="Share on LinkedIn" class="in"></a>
+						</div>
+		      </div>
 
 		        </header>
 		        <main class="article__content">
 		            <?php the_content(); ?>
 		        </main>
 		        <footer class="article__footer">
-		        	<!-- Go to www.addthis.com/dashboard to customize your tools --> 
-		        	<div class="addthis_inline_share_toolbox"></div>
+				<div class="read-later-social">
+						<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" title="Share on Facebook." class="fb"></a>
+  <a href="http://vk.com/share.php?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&noparse=true" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="vk"></a>
+						<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="gp"></a>
+						<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!" class="tw"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&title=<?php the_title(); ?>&url=<?php the_permalink(); ?>" title="Share on LinkedIn" class="in"></a>
+						</div>
+					
 		        	<?php if(has_tag()) { ?>
 		        	<div class="article__tags"><i class="material-icons">&#xE892;</i>
 		        		<?php
-						$tags = get_tags(array(
-							'hide_empty' => false,
-        					'number'  => 5
-						));
+						$tags = get_the_tags();
 						foreach ($tags as $tag) {
 						  echo '<a href="' . get_tag_link ($tag->term_id) . '" title="' . $tag->name . '" rel="tag">' . $tag->name . '</a>';
+						}
+
+						$postcats = get_the_category();
+						$ccount=0;
+						if ($postcats) {
+							echo '<div class="article__tags"><i class="material-icons">&#xE892;</i>';
+						    foreach($postcats as $cat) {
+						        $ccount++;
+						        echo '<a href="' . get_category_link ($cat->term_id) . '" title="' . $cat->name . '" rel="tag">' . $cat->name . '</a>';
+						        if( $ccount >= 5 ) break; //change the number to adjust the count
+						    }
+						    echo '</div>';
 						}
 							      
 						?>
@@ -93,7 +140,7 @@
 					            <div class="article__controls">
 					            	<span class="date"><i class="material-icons">&#xE916;</i><span><?php echo get_the_date(); ?></span></span>
 					            	<span class="views"><i class="material-icons">&#xE417;</i><span><?php echo getPostViews(get_the_ID()); ?></span></span>
-					            	<span class="comments"><i class="material-icons">&#xE24C;</i><span><?php comments_number( '0', '1', '%' ); ?></span></span>
+									<?php if ( comments_open() || get_comments_number() ) : ?><a href="<?php the_permalink(); ?>#comments" class="comments"><i class="material-icons">&#xE24C;</i><span><?php comments_number( '0', '1', '%' ); ?></span></a> <?php endif;?>
 					            </div>
 								<h2 class="related-item__title"><a href="<?php the_permalink()?>"><?php the_title(); ?></a></h2>
 							</div>
@@ -107,6 +154,7 @@
 					<?php }?>
 
 					<?php if ( comments_open() || get_comments_number() ) : ?>
+					<a id="comments" name="comments"></a>		
 					<div class="article__comments">
 						<h2>Комментарии</h2>
     						<?php comments_template(); ?>
