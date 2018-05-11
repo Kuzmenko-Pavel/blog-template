@@ -1,0 +1,12 @@
+{
+  "name": "blog-template",
+  "version": "0.2.0",
+  "devDependencies": {
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install"
+  },
+  "dependencies": {
+    "bootstrap": "3.3.7"
+  }
+}

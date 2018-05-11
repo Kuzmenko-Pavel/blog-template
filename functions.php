@@ -180,6 +180,14 @@ function add_async_defer_attribute($tag, $handle)
     return str_replace(' src', ' async defer src', $tag);
 }
 
-add_filter('script_loader_tag', 'add_async_defer_attribute', 20, 2);
+//add_filter('script_loader_tag', 'add_async_defer_attribute', 20, 2);
+
+function add_stylesheet_min($stylesheet_uri, $stylesheet_dir_uri)
+{
+    return trailingslashit($stylesheet_dir_uri) . 'css/style.min.css';
+}
+
+add_filter('stylesheet_uri', 'add_stylesheet_min', 20, 2);
 
 ?>
+
