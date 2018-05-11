@@ -18,7 +18,7 @@ locate_template('/includes/admin/theme-admin.php', true);
 function enqueue_styles()
 {
     wp_enqueue_style('yo-style', get_stylesheet_uri());
-    wp_register_style('font-style', 'http://fonts.googleapis.com/css?family=Roboto:700,600,400,300');
+    wp_register_style('font-style', 'https://fonts.googleapis.com/css?family=Roboto:700,600,400,300');
     wp_register_style('bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
     wp_enqueue_style('font-style');
     wp_enqueue_style('bootstrap-style');
