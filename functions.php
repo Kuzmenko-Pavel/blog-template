@@ -6,9 +6,9 @@ define('THEME_INFO', 'http://yottos.com/');
 
 add_theme_support('post-thumbnails');
 add_theme_support('automatic-feed-links');
-add_action('after_setup_theme', function(){
-	if ( ! is_admin() && ! current_user_can('manage_options') )
-		show_admin_bar( false );
+add_action('after_setup_theme', function () {
+    if (!is_admin() && !current_user_can('manage_options'))
+        show_admin_bar(false);
 });
 
 // include Admin Files
@@ -45,13 +45,14 @@ function enqueue_scripts()
     wp_register_script('material', 'https://code.getmdl.io/1.3.0/material.min.js');
     wp_register_script('flex_menu', 'https://cdnjs.cloudflare.com/ajax/libs/flexMenu/1.4.2/flexmenu.min.js');
     wp_register_script('recaptcha', 'https://www.google.com/recaptcha/api.js');
-    
+
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('material');
     wp_enqueue_script('flex_menu');
     wp_enqueue_script('recaptcha');
 }
+
 add_action('wp_enqueue_scripts', 'enqueue_scripts', 2, 1);
 
 function yo_scripts()
@@ -61,13 +62,14 @@ function yo_scripts()
     wp_register_script('yo-popups', get_template_directory_uri() . '/assets/js/popups.js');
     wp_enqueue_script('yo-popups');
 }
+
 add_action('wp_enqueue_scripts', 'yo_scripts', 3, 1);
 
 // function to display number of posts.
 function getPostViews($postID)
 {
     $count_key = 'post_views_count';
-    $count     = get_post_meta($postID, $count_key, true);
+    $count = get_post_meta($postID, $count_key, true);
     if ($count == '') {
         delete_post_meta($postID, $count_key);
         add_post_meta($postID, $count_key, '0');
@@ -80,7 +82,7 @@ function getPostViews($postID)
 function setPostViews($postID)
 {
     $count_key = 'post_views_count';
-    $count     = get_post_meta($postID, $count_key, true);
+    $count = get_post_meta($postID, $count_key, true);
     if ($count == '') {
         $count = 0;
         delete_post_meta($postID, $count_key);
@@ -100,12 +102,14 @@ function posts_column_views($defaults)
     $defaults['post_views'] = __('Views');
     return $defaults;
 }
+
 function posts_custom_column_views($column_name, $id)
 {
     if ($column_name === 'post_views') {
         echo getPostViews(get_the_ID());
     }
 }
+
 function wpb_move_comment_field_to_bottom($fields)
 {
     $comment_field = $fields['comment'];
@@ -116,37 +120,42 @@ function wpb_move_comment_field_to_bottom($fields)
 
 add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
 
-function estimated_reading_time() { 
+function estimated_reading_time()
+{
     $post = get_post();
-    $words = substr_count( "( strip_tags( $post->post_content ) ) ", ' ' );
-    $minutes = round( $words / 190);    
+    $words = substr_count("( strip_tags( $post->post_content ) ) ", ' ');
+    $minutes = round($words / 190);
     $estimated_time = $minutes . ' мин.';
     return $estimated_time;
 }
 
 
-function SearchFilter($query) {
-if ($query->is_search) {
-$query->set('post_type', 'post');
+function SearchFilter($query)
+{
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
 }
-return $query;
+
+add_filter('pre_get_posts', 'SearchFilter');
+
+
+function wpb_custom_new_menu()
+{
+    register_nav_menus(
+        array(
+            'top_dropdown' => __('Top dropdown menu'),
+            'main_nav' => __('Main navigation')
+        )
+    );
 }
- 
-add_filter('pre_get_posts','SearchFilter');
+
+add_action('init', 'wpb_custom_new_menu');
 
 
-function wpb_custom_new_menu() {
-  register_nav_menus(
-    array(
-      'top_dropdown' => __( 'Top dropdown menu' ),
-      'main_nav' => __( 'Main navigation' )
-    )
-  );
-}
-add_action( 'init', 'wpb_custom_new_menu' );
-
-
-function social_media_icons( $contactmethods ) {
+function social_media_icons($contactmethods)
+{
     // Add social media
     $contactmethods['vkontakte'] = 'VKontakte link';
     $contactmethods['facebook'] = 'Facebook link';
@@ -154,16 +163,21 @@ function social_media_icons( $contactmethods ) {
 
     return $contactmethods;
 }
-add_filter('user_contactmethods','social_media_icons',10,1);
+
+add_filter('user_contactmethods', 'social_media_icons', 10, 1);
 
 
-function new_excerpt_more($more) {
+function new_excerpt_more($more)
+{
     return '';
 }
+
 add_filter('excerpt_more', 'new_excerpt_more');
 
 
-function add_async_defer_attribute($tag, $handle) {
-	return str_replace( ' src', ' async defer src', $tag );
+function add_async_defer_attribute($tag, $handle)
+{
+    return str_replace(' src', ' async defer src', $tag);
 }
+
 ?>

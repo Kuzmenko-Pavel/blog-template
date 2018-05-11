@@ -90,20 +90,20 @@ $(function () {
             $(".popup-wrap").removeClass("show");
         }
     });
-    $('#readLater').on("submit", function(e){
+    $('#readLater').on("submit", function (e) {
         e.preventDefault();
         $('#readLater').hide();
         $('#thanks').show();
     });
-    $('#closeReadLater').click(function(){
+    $('#closeReadLater').click(function () {
         $('#readLater').closest('.popup-wrap').removeClass('show');
     });
-    $('#subscriptionForm').on("submit", function(e){
+    $('#subscriptionForm').on("submit", function (e) {
         e.preventDefault();
         $('#subscriptionForm').hide();
         $('#thanksSubscription').addClass('show');
     });
-    $('#closeSubscription').click(function(){
+    $('#closeSubscription').click(function () {
         $('.subscription').remove();
     });
     $(document).on("click", ".delete-file", function (e) {
@@ -116,7 +116,6 @@ $(function () {
 
 
 });
-
 
 
 function updateList() {
