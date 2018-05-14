@@ -68,11 +68,8 @@
     margin: 0;
     text-decoration: none;
     li, ol {
-      margin-top: 40px;
+      margin-bottom: 40px;
       list-style: none;
-    }
-    &:first-child {
-      margin-top: 0px;
     }
   }
   .widget {
