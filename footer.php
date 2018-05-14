@@ -21,7 +21,7 @@
             <?php endif; ?>
         </div>
     </div>
-    <small>&copy;&nbsp;2006&nbsp;&ndash;&nbsp;2017&nbsp;YOTTOS</small>
+    <small>&copy;&nbsp;2006&nbsp;&ndash;&nbsp;<?php echo date('Y'); ?>&nbsp;YOTTOS</small>
 </footer>
 <?php wp_footer(); ?>
 </body>
