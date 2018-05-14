@@ -39,13 +39,14 @@
     </form>
 
     <div id="thanksSubscription" class="popup">
-        <h3 class="text-center">Спасибо, что подписались</h3>
+        <?php elp_subbox( $elp_name = "YES", $elp_desc = "" ); ?>
+        <!--h3 class="text-center">Спасибо, что подписались</h3>
         <p class="text-center"><i class="material-icons" style="font-size: 48px; color:#3a5edc">&#xE86C;</i></p>
         <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной
             "рыбой" для текстов на латинице с начала XVI века. </p>
         <div class="actions-block">
             <a href="#" id="closeSubscription" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Закрыть</a>
-        </div>
+        </div-->
     </div>
 </div>
 <div class="page-wrapper">
@@ -75,6 +76,7 @@
     <div class="container">
         <div class="static-header">
             <div class="search"><?php get_search_form(); ?></div>
+            <?php wp_reset_query(); ?>
             <?php wp_nav_menu(array(
                     'theme_location' => 'main_nav',
                     'container_id' => 'topMenu',
