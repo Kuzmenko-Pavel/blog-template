@@ -7125,6 +7125,31 @@ input[type="file"] {
 .sidebar__tags-list a[rel="tag"] {
   margin-bottom: 10px; }
 
+.sidebar .widget {
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15);
+}
+
+.sidebar .widget .widgettitle {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    line-height: 36px;
+    color: #555;
+    padding: 34px 40px 20px;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+@media (max-width: 1023px) {
+    .sidebar .widget .widgettitle {
+        padding: 14px 15px 10px;
+    }
+}
+
+.sidebar .widget .tagcloud a.tag-cloud-link {
+    margin-bottom: 10px;
+}
+
 .yo-header {
   position: fixed;
   width: 100%;
