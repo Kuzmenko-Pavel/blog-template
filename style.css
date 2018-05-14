@@ -7536,7 +7536,7 @@ input[type="file"] {
         margin-left: 25px; }
       .footer .social-buttons .social-button.li {
         background-color: #1986C9;
-        background-image: url(assets/images/in.svg); }
+        background-image: url(assets/images/li.svg); }
       .footer .social-buttons .social-button.vk {
         background-color: #4962A4;
         background-image: url(assets/images/vk.svg); }
@@ -7546,18 +7546,18 @@ input[type="file"] {
       .footer .social-buttons .social-button.gp {
         background-color: #4962A4;
         background-image: url(assets/images/gp.svg); }
-      .footer .social-buttons .social-button.tv {
+      .footer .social-buttons .social-button.tw {
         background-color: #4962A4;
         background-image: url(assets/images/tw.svg); }
       .footer .social-buttons .social-button.yo {
         background-color: #4962A4;
-        background-image: url(assets/images/fb.svg); }
+        background-image: url(assets/images/yo.svg); }
       .footer .social-buttons .social-button.rs {
         background-color: #4962A4;
-        background-image: url(assets/images/fb.svg); }
+        background-image: url(assets/images/rs.svg); }
       .footer .social-buttons .social-button.in {
         background-color: #4962A4;
-        background-image: url(assets/images/fb.svg); }
+        background-image: url(assets/images/in.svg); }
       .footer .social-buttons .social-button span {
         display: none; }
     @media (max-width: 992px) {

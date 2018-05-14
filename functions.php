@@ -194,7 +194,7 @@ function add_stylesheet_min($stylesheet_uri, $stylesheet_dir_uri)
     return trailingslashit($stylesheet_dir_uri) . 'style.min.css';
 }
 
-add_filter('stylesheet_uri', 'add_stylesheet_min', 20, 2);
+//add_filter('stylesheet_uri', 'add_stylesheet_min', 20, 2);
 
 
 //clean head
