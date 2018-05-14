@@ -63,6 +63,13 @@
 }
 
 .sidebar {
+  ul {
+    text-decoration: none;
+    li, ol {
+      list-style: none;
+      margin: 0;
+    }
+  }
   .widget {
     box-shadow: 0 6px 16px 0 rgba(black, .15);
     .widgettitle {
@@ -82,6 +89,12 @@
       a.tag-cloud-link {
         margin-bottom: 10px;
       }
+
+    }
+    .widget_tag_cloud {
+
+    }
+    .widget_recent_entries {
 
     }
   }
