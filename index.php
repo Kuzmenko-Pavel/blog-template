@@ -10,7 +10,7 @@
                         <?php } ?>
                         <h2 class="article__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h2>
-                        <div class="article__excerpt"><?php the_excerpt(); ?>  </div>
+                        <div class="article__excerpt"><?php the_content(); ?></div>
                         <div class="article__controls">
                                 <span class="date"><i
                                             class="material-icons">&#xE916;</i><span><?php echo get_the_date(); ?></span></span>
@@ -49,6 +49,7 @@
                                     href="<?php the_permalink(); ?>"
                                     class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary">read
                                 more</a></p>
+                        <?php wp_link_pages(); ?>
                     </article>
                 <?php endwhile; ?>
                 <?php endif; ?>

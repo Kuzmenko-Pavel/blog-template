@@ -15,29 +15,30 @@
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
             id="subscriptionDrop"><i class="material-icons">mail</i><span class="subscr-text">Подписаться</span>
     </button>
-    <form action="" id="subscriptionForm">
-        <h3 class="text-center">Подписаться на рассылку</h3>
-        <div class="input-field">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <label for="name" class="mdl-textfield__label">Ваше имя</label>
-                <input type="text" class="mdl-textfield__input" name="name">
-            </div>
-        </div>
-        <div class="input-field">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <label for="email" class="mdl-textfield__label">Ваш email</label>
-                <input type="text" class="mdl-textfield__input" name="email">
-            </div>
-        </div>
-        <div class="form-action">
-            <input type="reset"
-                   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--default"
-                   value="Я уже">
-            <input type="submit"
-                   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                   value="Отправить">
-        </div>
-    </form>
+    <?php elp_subbox( $elp_name = "YES", $elp_desc = "xzczcx" ); ?>
+<!--    <form action="" id="subscriptionForm">-->
+<!--        <h31 class="text-center">Подписаться на рассылку</h3>-->
+<!--        <div class="input-field">-->
+<!--            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">-->
+<!--                <label for="name" class="mdl-textfield__label">Ваше имя</label>-->
+<!--                <input type="text" class="mdl-textfield__input" name="name">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="input-field">-->
+<!--            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">-->
+<!--                <label for="email" class="mdl-textfield__label">Ваш email</label>-->
+<!--                <input type="text" class="mdl-textfield__input" name="email">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="form-action">-->
+<!--            <input type="reset"-->
+<!--                   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--default"-->
+<!--                   value="Я уже">-->
+<!--            <input type="submit"-->
+<!--                   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"-->
+<!--                   value="Отправить">-->
+<!--        </div>-->
+<!--    </form>-->
 
     <div id="thanksSubscription" class="popup">
         <h3 class="text-center">Спасибо, что подписались</h3>
