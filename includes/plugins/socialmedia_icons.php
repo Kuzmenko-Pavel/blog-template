@@ -15,6 +15,13 @@ if (isset($options['theme_twitter']) and $options['theme_twitter'] <> '') { ?>
        title="Twitter"><span>Twitter</span></a>
 <?php } ?>
 
+<?php // VK Button
+if (isset($options['theme_vk']) and $options['theme_vk'] <> '') { ?>
+    <a href="<?php echo esc_url($options['theme_vk']); ?>" target="_blank" class="social-button vk"
+       title="Vk"><span>Vk</span></a>
+<?php } ?>
+
+
 <?php // Facebook Button
 if (isset($options['theme_facebook']) and $options['theme_facebook'] <> '') { ?>
     <a href="<?php echo esc_url($options['theme_facebook']); ?>" target="_blank" class="social-button fb"

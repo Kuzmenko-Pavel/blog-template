@@ -39,6 +39,13 @@ function theme_get_settings()
         "type" => "text",
         "section" => "theme_buttons");
 
+    $theme_settings[] = array("name" => "Vk",
+        "desc" => __('Enter the URL to your Vk Profile here.'),
+        "id" => "theme_vk",
+        "std" => "",
+        "type" => "text",
+        "section" => "theme_buttons");
+
     $theme_settings[] = array("name" => "Instagram",
         "desc" => __('Enter the URL to your Instagram Profile here.'),
         "id" => "theme_instagram",
