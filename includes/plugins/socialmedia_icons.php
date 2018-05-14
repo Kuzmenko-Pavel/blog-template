@@ -29,7 +29,7 @@ if (isset($options['theme_instagram']) and $options['theme_instagram'] <> '') { 
 
 <?php // Google+ Button
 if (isset($options['theme_googleplus']) and $options['theme_googleplus'] <> '') { ?>
-    <a href="<?php echo esc_url($options['theme_googleplus']); ?>" target="_blank" class="social-button go"
+    <a href="<?php echo esc_url($options['theme_googleplus']); ?>" target="_blank" class="social-button gp"
        title="Google+"><span>Google+</span></a>
 <?php } ?>
 
