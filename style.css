@@ -7130,11 +7130,8 @@ input[type="file"] {
   margin: 0;
   text-decoration: none; }
   .sidebar ul li, .sidebar ul ol {
-    margin-top: 40px;
+    margin-bottom: 40px;
     list-style: none; }
-
-.sidebar ul:first-child {
-    margin-top: 0px; }
 .sidebar .widget {
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15); }
   .sidebar .widget ul, .sidebar .widget div {
