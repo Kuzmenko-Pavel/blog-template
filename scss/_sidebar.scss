@@ -68,13 +68,23 @@
     margin: 0;
     text-decoration: none;
     li, ol {
+      margin-top: 40px;
       list-style: none;
+    }
+    li.first, ol.first {
+      margin-top: 0px;
     }
   }
   .widget {
     box-shadow: 0 6px 16px 0 rgba(black, .15);
-    & + & {
-      margin-top: 40px;
+    ul, div {
+      padding: 28px 40px;
+      background: #fff;
+      line-height: 0;
+      font-size: 0;
+      @include b(tablet) {
+        padding: 14px 15px;
+      }
     }
     .widgettitle {
       font-size: 20px;
@@ -89,25 +99,8 @@
         padding: 14px 15px 10px;
       }
     }
-    ul, div {
-      padding: 28px 40px;
-      background: #fff;
-      line-height: 0;
-      font-size: 0;
-      @include b(tablet) {
-        padding: 14px 15px;
-      }
-    }
-    .tagcloud {
-      a.tag-cloud-link {
-        margin-bottom: 10px;
-      }
-
-    }
-    .widget_tag_cloud {
-
-    }
-    .widget_recent_entries {
+  }
+  .widget_recent_entries {
       ul {
         list-style: none;
         margin: 0;
@@ -133,5 +126,4 @@
         }
       }
     }
-  }
 }
