@@ -2,16 +2,7 @@
     <section class="section-main">
         <div class="container">
             <main class="main">
-                <?php
-                if (have_posts()) :
-                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $args = array(
-                        'paged' => $paged,
-                        'post_type' => 'post',
-                        'posts_per_page' => 5
-                    );
-                    $loop = new WP_Query($args);
-                    while ($loop->have_posts()) : $loop->the_post(); ?>
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <article class="article-item">
 
                             <?php if (has_post_thumbnail()) { ?>
@@ -59,9 +50,9 @@
                                         class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary">read
                                     more</a></p>
                         </article>
-                    <?php endwhile;
-                    wp_reset_postdata();
-                endif;
+                <?php endwhile; ?>
+                <?php endif; ?>
+                <?php
                 $nextp = get_next_posts_link('Предыдущие статьи <i class="material-icons">&#xE409;</i>');
                 $prevp = get_previous_posts_link('<i class="material-icons">&#xE408;</i> Следующие статьи');
                 if ($nextp || $prevp):
