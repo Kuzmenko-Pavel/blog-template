@@ -27,6 +27,14 @@ function custom_theme_features()
             'main_nav' => __('Main navigation')
         )
     );
+
+    register_sidebar(array('name' => 'Sidebar Blog', 'id' => 'sidebar-blog'));
+
+    register_sidebar(array('name' => 'Sidebar Pages', 'id' => 'sidebar-pages'));
+
+    register_sidebar(array('name' => 'Sidebar Footer', 'id' => 'sidebar-footer'));
+
+    register_sidebar(array('name' => 'Sidebar Other', 'id' => 'sidebar-other'));
 }
 
 add_action('after_setup_theme', 'custom_theme_features');
@@ -35,11 +43,6 @@ add_action('after_setup_theme', 'custom_theme_features');
 // include Admin Files
 locate_template('/includes/admin/theme-settings.php', true);
 locate_template('/includes/admin/theme-admin.php', true);
-
-// Register Sidebars
-register_sidebar(array('name' => 'Sidebar Blog', 'id' => 'sidebar-blog'));
-register_sidebar(array('name' => 'Sidebar Pages', 'id' => 'sidebar-pages'));
-register_sidebar(array('name' => 'Footer', 'id' => 'sidebar-footer'));
 
 
 function enqueue_styles()
