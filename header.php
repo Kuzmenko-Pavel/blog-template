@@ -39,7 +39,7 @@
     </form>
 
     <div id="thanksSubscription" class="popup">
-        <?php elp_subbox( $elp_name = "YES", $elp_desc = "" ); ?>
+        <?php elp_subbox( $elp_name = "YES", $elp_desc = "xzczcx" ); ?>
         <!--h3 class="text-center">Спасибо, что подписались</h3>
         <p class="text-center"><i class="material-icons" style="font-size: 48px; color:#3a5edc">&#xE86C;</i></p>
         <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной
