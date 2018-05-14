@@ -71,7 +71,7 @@
       margin-top: 40px;
       list-style: none;
     }
-    li.first, ol.first {
+    &:first-child {
       margin-top: 0px;
     }
   }
