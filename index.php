@@ -36,7 +36,7 @@
                         $postcats = get_the_category();
                         $ccount = 0;
                         if ($postcats) {
-                            echo '<div class="article__tags"><i class="material-icons">&#xE892;</i>';
+                            echo '<div class="article__tags"><i class="material-icons">category</i>';
                             foreach ($postcats as $cat) {
                                 $ccount++;
                                 echo '<a href="' . get_category_link($cat->term_id) . '" title="' . $cat->name . '" rel="tag">' . $cat->name . '</a>';
