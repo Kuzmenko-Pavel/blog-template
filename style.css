@@ -7498,7 +7498,7 @@ input[type="file"] {
     padding: 50px 0;
     display: table;
     float: left;
-    width: calc(100% - 230px); }
+    width: calc(100% - 550px); }
     @media (max-width: 992px) {
       .footer .footer-menu {
         display: block;
@@ -7517,7 +7517,7 @@ input[type="file"] {
             margin: 0 auto; } }
   .footer .social-buttons {
     height: 100px;
-    width: 230px;
+    width: 550px;
     position: relative;
     overflow: hidden;
     float: right;
