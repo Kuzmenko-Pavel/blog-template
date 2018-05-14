@@ -7562,9 +7562,12 @@ input[type="file"] {
         display: none; }
     @media (max-width: 992px) {
       .footer .social-buttons {
+        width: 280px;
         float: none;
         margin: 0 auto;
-        padding: 0; } }
+        padding: 0; }
+        .footer .social-buttons .social-button.rs, .footer .social-buttons .social-button.vk, .footer .social-buttons .social-button.li, .footer .social-buttons .social-button.yo, .footer .social-buttons .social-button.gp {
+          display: none; } }
   .footer small {
     font-size: 12px;
     text-align: center;

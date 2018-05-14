@@ -100,9 +100,15 @@
     }
 
     @media (max-width: 992px) {
+      width: 280px;
       float: none;
       margin: 0 auto;
       padding: 0;
+      .social-button {
+        &.rs, &.vk, &.li, &.yo, &.gp{
+          display: none;
+        }
+      }
     }
   }
 
