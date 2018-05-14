@@ -11,6 +11,7 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="subscription">
+    <?php elp_subbox( $elp_name = "YES", $elp_desc = "xzczcx" ); ?>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
             id="subscriptionDrop"><i class="material-icons">mail</i><span class="subscr-text">Подписаться</span>
     </button>
@@ -39,14 +40,13 @@
     </form>
 
     <div id="thanksSubscription" class="popup">
-        <?php elp_subbox( $elp_name = "YES", $elp_desc = "xzczcx" ); ?>
-        <!--h3 class="text-center">Спасибо, что подписались</h3>
+        <h3 class="text-center">Спасибо, что подписались</h3>
         <p class="text-center"><i class="material-icons" style="font-size: 48px; color:#3a5edc">&#xE86C;</i></p>
         <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной
             "рыбой" для текстов на латинице с начала XVI века. </p>
         <div class="actions-block">
             <a href="#" id="closeSubscription" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Закрыть</a>
-        </div-->
+        </div>
     </div>
 </div>
 <div class="page-wrapper">
