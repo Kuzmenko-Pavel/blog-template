@@ -7156,26 +7156,37 @@ input[type="file"] {
     @media (max-width: 1023px) {
       .sidebar .widget .widgettitle {
         padding: 14px 15px 10px; } }
-.sidebar .widget_recent_entries ul {
+
+.sidebar .widget ul, .sidebar .widget .widget_recent_entries ul {
   list-style: none;
-  margin: 0; }
-  .sidebar .widget_recent_entries ul li {
-    padding: 0;
-    margin: 0 0 26px; }
-    @media (max-width: 1023px) {
-      .sidebar .widget_recent_entries ul li {
-        margin: 0 0 14px; } }
-    .sidebar .widget_recent_entries ul li a {
-      display: inline;
-      font-family: 'SF UI Display', sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 26px;
-      color: #424242;
-      border-bottom: 1px dashed #424242; }
-      .sidebar .widget_recent_entries ul li a:hover, .sidebar .widget_recent_entries ul li a:focus {
-        text-decoration: none;
-        border-bottom-style: solid; }
+  margin: 0;
+}
+
+.sidebar .widget ul li, .sidebar .widget .widget_recent_entries ul li {
+  padding: 0;
+  margin: 0 0 26px;
+}
+
+@media (max-width: 1023px) {
+  .sidebar .widget ul li, .sidebar .widget .widget_recent_entries ul li {
+    margin: 0 0 14px;
+  }
+}
+
+.sidebar .widget ul li a, .sidebar .widget .widget_recent_entries ul li a {
+  display: inline;
+  font-family: 'SF UI Display', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #424242;
+  border-bottom: 1px dashed #424242;
+}
+
+.sidebar .widget ul li a:hover, .sidebar .widget ul li a:focus, .sidebar .widget .widget_recent_entries ul li a:hover, .sidebar .widget .widget_recent_entries ul li a:focus {
+  text-decoration: none;
+  border-bottom-style: solid;
+}
 
 .yo-header {
   position: fixed;
