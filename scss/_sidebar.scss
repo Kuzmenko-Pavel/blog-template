@@ -64,14 +64,18 @@
 
 .sidebar {
   ul {
+    padding: 0;
+    margin: 0;
     text-decoration: none;
     li, ol {
       list-style: none;
-      margin: 0;
     }
   }
   .widget {
     box-shadow: 0 6px 16px 0 rgba(black, .15);
+    & + & {
+      margin-top: 40px;
+    }
     .widgettitle {
       font-size: 20px;
       font-weight: 500;
@@ -85,6 +89,15 @@
         padding: 14px 15px 10px;
       }
     }
+    ul, div {
+      padding: 28px 40px;
+      background: #fff;
+      line-height: 0;
+      font-size: 0;
+      @include b(tablet) {
+        padding: 14px 15px;
+      }
+    }
     .tagcloud {
       a.tag-cloud-link {
         margin-bottom: 10px;
@@ -95,7 +108,30 @@
 
     }
     .widget_recent_entries {
-
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          padding: 0;
+          margin: 0 0 26px;
+          @include b(tablet) {
+            margin: 0 0 14px;
+          }
+          a {
+            display: inline;
+            font-family: 'SF UI Display', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #424242;
+            border-bottom: 1px dashed #424242;
+            &:hover, &:focus {
+              text-decoration: none;
+              border-bottom-style: solid;
+            }
+          }
+        }
+      }
     }
   }
 }
