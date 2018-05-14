@@ -4,16 +4,43 @@
 define('THEME_NAME', 'YottosBlog');
 define('THEME_INFO', 'http://yottos.com/');
 
-add_theme_support('post-thumbnails');
-add_theme_support('automatic-feed-links');
-add_action('after_setup_theme', function () {
+// Register Theme Features
+function custom_theme_features()
+{
+
+    // Add theme support for Automatic Feed Links
+    add_theme_support('automatic-feed-links');
+
+    // Add theme support for Featured Images
+    add_theme_support('post-thumbnails');
+
+    // Add theme support for HTML5 Semantic Markup
+    add_theme_support('html5', array());
+
     if (!is_admin() && !current_user_can('manage_options'))
         show_admin_bar(false);
-});
+
+    add_theme_support('menus');
+    register_nav_menus(
+        array(
+            'top_dropdown' => __('Top dropdown menu'),
+            'main_nav' => __('Main navigation')
+        )
+    );
+}
+
+add_action('after_setup_theme', 'custom_theme_features');
+
 
 // include Admin Files
 locate_template('/includes/admin/theme-settings.php', true);
 locate_template('/includes/admin/theme-admin.php', true);
+
+// Register Sidebars
+register_sidebar(array('name' => 'Sidebar Blog', 'id' => 'sidebar-blog'));
+register_sidebar(array('name' => 'Sidebar Pages', 'id' => 'sidebar-pages'));
+register_sidebar(array('name' => 'Footer', 'id' => 'sidebar-footer'));
+
 
 function enqueue_styles()
 {
@@ -141,27 +168,6 @@ function SearchFilter($query)
 add_filter('pre_get_posts', 'SearchFilter');
 
 
-function wpb_custom_new_menu()
-{
-    register_nav_menus(
-        array(
-            'top_dropdown' => __('Top dropdown menu'),
-            'main_nav' => __('Main navigation')
-        )
-    );
-}
-
-add_action('init', 'wpb_custom_new_menu');
-
-
-function new_excerpt_more($more)
-{
-    return '';
-}
-
-add_filter('excerpt_more', 'new_excerpt_more');
-
-
 function add_async_defer_attribute($tag, $handle)
 {
     return str_replace(' src', ' async defer src', $tag);
@@ -175,6 +181,15 @@ function add_stylesheet_min($stylesheet_uri, $stylesheet_dir_uri)
 }
 
 add_filter('stylesheet_uri', 'add_stylesheet_min', 20, 2);
+
+
+//clean head
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+
 
 ?>
 

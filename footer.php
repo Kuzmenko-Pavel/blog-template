@@ -22,6 +22,13 @@
         </div>
     </div>
     <small>&copy;&nbsp;2006&nbsp;&ndash;&nbsp;<?php echo date('Y'); ?>&nbsp;YOTTOS</small>
+    <?php if (is_active_sidebar('sidebar-footer')) : ?>
+        <div id="sidebar-footer">
+            <ul>
+                <?php dynamic_sidebar('sidebar-footer'); ?>
+            </ul>
+        </div>
+    <?php endif; ?>
 </footer>
 <?php wp_footer(); ?>
 </body>
