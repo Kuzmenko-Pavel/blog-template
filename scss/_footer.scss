@@ -62,7 +62,7 @@
         margin-left: 25px;
       }
 
-      &.in {
+      &.li {
         background-color: #1986C9;
         background-image: url(assets/images/in.svg);
       }
@@ -74,7 +74,26 @@
         background-color: #4962A4;
         background-image: url(assets/images/fb.svg);
       }
-
+      &.go {
+        background-color: #4962A4;
+        background-image: url(assets/images/fb.svg);
+      }
+      &.tv {
+        background-color: #4962A4;
+        background-image: url(assets/images/fb.svg);
+      }
+      &.yo {
+        background-color: #4962A4;
+        background-image: url(assets/images/fb.svg);
+      }
+      &.rs {
+        background-color: #4962A4;
+        background-image: url(assets/images/fb.svg);
+      }
+      &.in {
+        background-color: #4962A4;
+        background-image: url(assets/images/fb.svg);
+      }
       span {
         display: none;
       }
