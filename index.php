@@ -49,7 +49,6 @@
                                     href="<?php the_permalink(); ?>"
                                     class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary">read
                                 more</a></p>
-                        <?php wp_link_pages(); ?>
                     </article>
                 <?php endwhile; ?>
                 <?php endif; ?>

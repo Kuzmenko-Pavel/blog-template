@@ -14,7 +14,7 @@
                         <h2 class="article__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h2>
 
-                        <div class="article__excerpt"><?php the_excerpt(); ?>  </div>
+                        <div class="article__excerpt"><?php the_content(''); ?>  </div>
 
                         <div class="article__controls">
                                 <span class="date"><i
