@@ -47,8 +47,7 @@
                         ?>
                         <p style="text-align:right; margin: 0; padding: 25px 0 0;"><a
                                     href="<?php the_permalink(); ?>"
-                                    class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary">read
-                                more</a></p>
+                                    class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary">Перейти к полной статье...</a></p>
                     </article>
                 <?php endwhile; ?>
                 <?php endif; ?>
