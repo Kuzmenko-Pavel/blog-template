@@ -95,6 +95,17 @@ function yo_scripts()
 
 add_action('wp_enqueue_scripts', 'yo_scripts', 3, 1);
 
+
+add_filter('widget_tag_cloud_args', 'tag_widget_limit');
+function tag_widget_limit($args)
+{
+    if (isset($args['taxonomy']) && $args['taxonomy'] == 'post_tag') {
+        $args['number'] = 5; //Limit number of tags
+    }
+    return $args;
+}
+
+
 // function to display number of posts.
 function getPostViews($postID)
 {
