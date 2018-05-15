@@ -6401,29 +6401,6 @@ body {
     line-height: inherit;
     color: inherit; }
 
-a[rel="tag"], a[rel="category"] {
-  display: inline-block;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 0;
-  color: #777777;
-  font-size: 14px;
-  text-decoration: none;
-  font-family: 'SF UI Display', sans-serif;
-  font-weight: 400;
-  margin-right: 8px;
-  padding: 0 9px;
-  line-height: 20px;
-  height: 20px;
-  background: #eeeeee; }
-  a[rel="tag"]:hover, a[rel="tag"]:focus, a[rel="category"]:hover, a[rel="category"]:focus {
-    color: #777777;
-    text-decoration: none;
-    background: #e1e1e1;
-    border: 0; }
-
 a.tag-cloud-link {
   display: inline-block;
   white-space: nowrap;
@@ -6432,14 +6409,11 @@ a.tag-cloud-link {
   text-overflow: ellipsis;
   border: 0;
   color: #777777;
-  font-size: 14px;
   text-decoration: none;
   font-family: 'SF UI Display', sans-serif;
   font-weight: 400;
-  margin-right: 8px;
-  padding: 0 9px;
-  line-height: 20px;
-  height: 20px;
+  padding: 0 5px;
+  line-height: 120%;
   background: #eeeeee; }
   a.tag-cloud-link:hover, a.tag-cloud-link:focus {
     color: #777777;
