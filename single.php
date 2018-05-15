@@ -70,7 +70,7 @@
 		            	</div> -->
 
                             <div class="read-later-social">
-	                            <?php echo do_shortcode( '[ess_post]' ); ?>
+	                            <?php echo do_shortcode('[ess_post share_type="count"]'); ?>
                             </div>
                         </div>
 
@@ -80,7 +80,7 @@
                     </main>
                     <footer class="article__footer">
                         <div class="read-later-social">
-	                        <?php echo do_shortcode( '[ess_post]' ); ?>
+	                        <?php echo do_shortcode('[ess_post share_type="count"]'); ?>
                         </div>
 
                         <?php if (has_tag()) { ?>
