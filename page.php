@@ -48,7 +48,7 @@
                         <?php } ?>
                     </footer>
                     <section class="article__misc">
-	                    <?php locate_template('/includes/plugins/related_post.php', true); ?>
+	                    <!--?php locate_template('/includes/plugins/related_post.php', true); ?-->
 
                         <?php if (comments_open() || get_comments_number()) : ?>
                             <a id="comments" name="comments"></a>
