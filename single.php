@@ -129,7 +129,7 @@
                         <?php } ?>
                     </footer>
                     <section class="article__misc">
-                        <?php locate_template('/includes/plugins/related_page.php', true); ?>
+                        <?php locate_template('/includes/plugins/related_post.php', true); ?>
                         <!--?php locate_template('/includes/plugins/comments_page.php', true); ?-->
                     </section>
                 <?php endwhile; endif; ?>
