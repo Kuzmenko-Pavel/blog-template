@@ -208,6 +208,7 @@ remove_action('wp_head', 'wp_generator');
 add_action('after_setup_theme', 'my_load_plugin');
 function my_load_plugin() {
     include_once(TEMPLATEPATH.'/plugins/easy-social-share-buttons/easy-social-share-buttons.php');
+	include_once(TEMPLATEPATH.'/plugins/advanced-custom-fields/acf.php');
 }
 
 ?>
