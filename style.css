@@ -7633,20 +7633,10 @@ a.social-button.borderless {
     overflow: hidden;
     float: right;
     padding: 40px 0 0; }
-    .footer .social-buttons .social-button {
-      display: block;
-      float: left;
-      position: relative;
-      width: 60px;
-      height: 60px;
-      text-indent: -9999px;
-      border-radius: 50%;
-      background-position: center;
-      background-repeat: no-repeat; }
-      .footer .social-buttons .social-button:not(:first-child) {
-        margin-left: 25px; }
-      .footer .social-buttons .social-button span {
-        display: none; }
+    .footer .social-buttons .social-button:not(:first-child) {
+      margin-left: 25px; }
+    .footer .social-buttons .social-button span {
+      display: none; }
     @media (max-width: 992px) {
       .footer .social-buttons {
         width: 280px;
