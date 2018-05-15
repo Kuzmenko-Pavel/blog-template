@@ -34,7 +34,7 @@ function custom_theme_features()
 
     register_sidebar(array('name' => 'Sidebar Footer', 'id' => 'sidebar-footer'));
 
-    register_sidebar(array('name' => 'Sidebar Other', 'id' => 'sidebar-other'));
+    register_sidebar(array('name' => 'Sidebar Search', 'id' => 'sidebar-search'));
 }
 
 add_action('after_setup_theme', 'custom_theme_features');
