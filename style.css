@@ -7433,6 +7433,169 @@ a.tag-cloud-link {
       .static-header .search-field:focus {
         background: rgba(0, 0, 0, 0.15); }
 
+@font-face {
+  font-family: 'socialfont';
+  src: url("assets/fonts/socialfont.eot?mh1paq");
+  src: url("assets/fonts/socialfont.eot?#iefixmh1paq") format("embedded-opentype"), url("assets/fonts/socialfont.woff?mh1paq") format("woff"), url("assets/fonts/socialfont.ttf?mh1paq") format("truetype"), url("assets/fonts/socialfont.svg?mh1paq#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class*=" icon-"], [class^=icon-] {
+  font-family: socialfont;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1; }
+
+.icon-facebook:before {
+  content: ""; }
+.icon-facebook.color:hover {
+  background-color: #3b5998; }
+.icon-facebook.borderless:hover {
+  color: #3b5998; }
+
+.icon-twitter:before {
+  content: ""; }
+.icon-twitter.color:hover {
+  background-color: #4dc8f1; }
+.icon-twitter.borderless:hover {
+  color: #4dc8f1; }
+
+.icon-instagram:before {
+  content: ""; }
+.icon-instagram.color:hover {
+  background-color: #3e739d; }
+.icon-instagram.borderless:hover {
+  color: #3e739d; }
+
+.icon-behance:before {
+  content: ""; }
+.icon-behance.color:hover {
+  background-color: #0683f1; }
+.icon-behance.borderless:hover {
+  color: #0683f1; }
+
+.icon-vimeo:before {
+  content: ""; }
+.icon-vimeo.color:hover {
+  background-color: #86c9ef; }
+.icon-vimeo.borderless:hover {
+  color: #86c9ef; }
+
+.icon-youtube:before {
+  content: ""; }
+.icon-youtube.color:hover {
+  background-color: #ce332d; }
+.icon-youtube.borderless:hover {
+  color: #ce332d; }
+
+.icon-googleplus:before {
+  content: ""; }
+.icon-googleplus.color:hover {
+  background-color: #d13f2d; }
+.icon-googleplus.borderless:hover {
+  color: #d13f2d; }
+
+.icon-rss:before {
+  content: ""; }
+.icon-rss.color:hover {
+  background-color: #f88b02; }
+.icon-rss.borderless:hover {
+  color: #f88b02; }
+
+.icon-pinterest:before {
+  content: ""; }
+.icon-pinterest.color:hover {
+  background-color: #cb2028; }
+.icon-pinterest.borderless:hover {
+  color: #cb2028; }
+
+.icon-tumblr:before {
+  content: ""; }
+.icon-tumblr.color:hover {
+  background-color: #274152; }
+.icon-tumblr.borderless:hover {
+  color: #274152; }
+
+.icon-linkedin:before {
+  content: ""; }
+.icon-linkedin.color:hover {
+  background-color: #0275b5; }
+.icon-linkedin.borderless:hover {
+  color: #0275b5; }
+
+.icon-skype:before {
+  content: ""; }
+.icon-skype.color:hover {
+  background-color: #03aceb; }
+.icon-skype.borderless:hover {
+  color: #03aceb; }
+
+.icon-github:before {
+  content: ""; }
+.icon-github.color:hover {
+  background-color: #4183C4; }
+.icon-github.borderless:hover {
+  color: #4183C4; }
+
+.icon-dribbble:before {
+  content: ""; }
+.icon-dribbble.color:hover {
+  background-color: #ea4c89; }
+.icon-dribbble.borderless:hover {
+  color: #ea4c89; }
+
+a.social-button {
+  font-size: 32px;
+  text-decoration: none;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: content-box;
+  transition-property: background-color, color, transform;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  a.social-button.no-animation {
+    transition-property: none !important; }
+
+a.social-button.color {
+  display: inline-block;
+  border: 1px solid #4b4b4b;
+  border-radius: 50%;
+  padding: .5em; }
+  a.social-button.color:hover {
+    border-color: transparent; }
+  a.social-button.color:before {
+    color: #4b4b4b; }
+  a.social-button.color:hover:before {
+    color: #FFF; }
+  a.social-button.color.static:hover {
+    border: 1px solid #4b4b4b !important;
+    background-color: transparent; }
+    a.social-button.color.static:hover:before {
+      color: #4b4b4b; }
+  a.social-button.color.white {
+    border-width: 2px; }
+    a.social-button.color.white:hover {
+      border-color: #FFF; }
+
+a.social-button.grey {
+  font-size: 32px;
+  display: inline-block;
+  background-color: #3D444D;
+  border-radius: 50%;
+  padding: .5em; }
+  a.social-button.grey:hover {
+    transform: translate(0px, -5px); }
+  a.social-button.grey:before {
+    color: #FFF; }
+  a.social-button.grey.static:hover {
+    transform: none; }
+
+a.social-button.borderless {
+  color: #4b4b4b; }
+
 .footer {
   background: #e0e0e0;
   position: absolute;
@@ -7482,30 +7645,6 @@ a.tag-cloud-link {
       background-repeat: no-repeat; }
       .footer .social-buttons .social-button:not(:first-child) {
         margin-left: 25px; }
-      .footer .social-buttons .social-button.li {
-        background-color: #1986C9;
-        background-image: url(assets/images/li.svg); }
-      .footer .social-buttons .social-button.vk {
-        background-color: #4962A4;
-        background-image: url(assets/images/vk.svg); }
-      .footer .social-buttons .social-button.fb {
-        background-color: #4962A4;
-        background-image: url(assets/images/fb.svg); }
-      .footer .social-buttons .social-button.gp {
-        background-color: #4962A4;
-        background-image: url(assets/images/gp.svg); }
-      .footer .social-buttons .social-button.tw {
-        background-color: #4962A4;
-        background-image: url(assets/images/tw.svg); }
-      .footer .social-buttons .social-button.yo {
-        background-color: #4962A4;
-        background-image: url(assets/images/yo.svg); }
-      .footer .social-buttons .social-button.rs {
-        background-color: #4962A4;
-        background-image: url(assets/images/rs.svg); }
-      .footer .social-buttons .social-button.in {
-        background-color: #4962A4;
-        background-image: url(assets/images/in.svg); }
       .footer .social-buttons .social-button span {
         display: none; }
     @media (max-width: 992px) {
@@ -7514,7 +7653,7 @@ a.tag-cloud-link {
         float: none;
         margin: 0 auto;
         padding: 0; }
-        .footer .social-buttons .social-button.rs, .footer .social-buttons .social-button.vk, .footer .social-buttons .social-button.li, .footer .social-buttons .social-button.yo, .footer .social-buttons .social-button.gp {
+        .footer .social-buttons .social-button.icon-rss, .footer .social-buttons .social-button.vk, .footer .social-buttons .social-button.icon-linkedin, .footer .social-buttons .social-button.icon-youtube, .footer .social-buttons .social-button.icon-googleplus {
           display: none; } }
   .footer small {
     font-size: 12px;
