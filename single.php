@@ -84,7 +84,15 @@
                     </main>
                     <footer class="article__footer">
                         <div class="read-later-social">
-	                        <?php echo do_shortcode('[ess_post share_type="count"]'); ?>
+                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                <a class="a2a_button_facebook a2a_counter"></a>
+                                <a class="a2a_button_pinterest a2a_counter"></a>
+                                <a class="a2a_button_tumblr a2a_counter"></a>
+                                <a class="a2a_button_reddit a2a_counter"></a>
+                                <a class="a2a_dd a2a_counter" href="https://www.addtoany.com/share"></a>
+                            </div>
+
+                            <script async src="https://static.addtoany.com/menu/page.js"></script>
                         </div>
 
                         <?php if (has_tag()) { ?>
