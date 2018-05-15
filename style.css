@@ -6413,7 +6413,7 @@ a.tag-cloud-link {
   font-family: 'SF UI Display', sans-serif;
   font-weight: 400;
   padding: 0 5px;
-  line-height: 120%;
+  line-height: 150%;
   background: #eeeeee; }
   a.tag-cloud-link:hover, a.tag-cloud-link:focus {
     color: #777777;
@@ -7132,7 +7132,9 @@ input[type="file"] {
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15); }
   .sidebar .widget ul, .sidebar .widget div {
     padding: 28px 40px;
-    background: #fff; }
+    background: #fff;
+    line-height: 0;
+    font-size: 0; }
     @media (max-width: 1023px) {
       .sidebar .widget ul, .sidebar .widget div {
         padding: 14px 15px; } }
