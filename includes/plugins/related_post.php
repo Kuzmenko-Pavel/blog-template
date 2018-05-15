@@ -3,6 +3,8 @@ $orig_post = $post;
 global $post;
 $posts = get_field('related_posts');
 $tags = wp_get_post_tags($post->ID);
+echo $posts;
+echo $tags;
 $tag_ids = array();
 if ($tags) {
 	foreach ( $tags as $individual_tag ) {
