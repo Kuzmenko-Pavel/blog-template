@@ -27,7 +27,7 @@ $(function () {
     $('#topMenu .menu-list').flexMenu({
         linkText: 'Еще',
         linkTextAll: 'Еще',
-        cutoff: 4
+        cutoff: 3
     });
 
     $(document).on('mouseup touchend', function (e) {
