@@ -70,18 +70,7 @@
 		            	</div> -->
 
                             <div class="read-later-social">
-                                <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>"
-                                   title="Share on Facebook." class="fb"></a>
-                                <a href="http://vk.com/share.php?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&noparse=true"
-                                   onclick="window.open(this.href,
-  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="vk"></a>
-                                <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>"
-                                   onclick="window.open(this.href,
-  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="gp"></a>
-                                <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>"
-                                   title="Tweet this!" class="tw"></a>
-                                <a href="http://www.linkedin.com/shareArticle?mini=true&title=<?php the_title(); ?>&url=<?php the_permalink(); ?>"
-                                   title="Share on LinkedIn" class="in"></a>
+	                            <?php echo do_shortcode( '[ess_post]' ); ?>
                             </div>
                         </div>
 
@@ -91,17 +80,7 @@
                     </main>
                     <footer class="article__footer">
                         <div class="read-later-social">
-                            <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title(); ?>"
-                               title="Share on Facebook." class="fb"></a>
-                            <a href="http://vk.com/share.php?url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&noparse=true"
-                               onclick="window.open(this.href,
-  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="vk"></a>
-                            <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="window.open(this.href,
-  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="gp"></a>
-                            <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>"
-                               title="Tweet this!" class="tw"></a>
-                            <a href="http://www.linkedin.com/shareArticle?mini=true&title=<?php the_title(); ?>&url=<?php the_permalink(); ?>"
-                               title="Share on LinkedIn" class="in"></a>
+	                        <?php echo do_shortcode( '[ess_post]' ); ?>
                         </div>
 
                         <?php if (has_tag()) { ?>
