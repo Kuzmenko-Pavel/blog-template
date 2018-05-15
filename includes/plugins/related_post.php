@@ -49,6 +49,9 @@ if ($posts) : ?>
 <?php else:
     $my_query = new wp_query($args);
     if ($my_query->have_posts()) { ?>
+        <div class="related-posts">
+        <h2>Ещё статьи по теме:</h2>
+        <div class="related-items">
 	    <?php while ($my_query->have_posts()) {
 		    $my_query->the_post(); ?>
             <div class="related-item">
@@ -74,8 +77,10 @@ if ($posts) : ?>
                 <h2 class="related-item__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
             </div>
-    <?php }
-    } ?>
+    <?php } ?>
+        </div>
+        </div>
+    <?php } ?>
 <?php endif;?>
 <?php
 $post = $orig_post;
