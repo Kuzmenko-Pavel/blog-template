@@ -48,24 +48,25 @@ if ($posts) : ?>
 			$category_ids[] = $individual_category->term_id;
 		}
 	}
-//	$args = array(
-//		'tag__in' => $tag_ids,
-//		'category__in' => $category_ids,
-//		'post__not_in' => array($orig_post->ID),
-//	);
 	$args = array(
 		'posts_per_page' => 4,
 		'caller_get_posts' => 1,
-		'tax_query' => array(
-			'relation' => 'OR',
-			array(
-				'tag__in' => $tag_ids
-			),
-			array(
-				'category__in' => $category_ids,
-			)
-		)
+		'category__in' => $category_ids,
+		'post__not_in' => array($orig_post->ID),
 	);
+//	$args = array(
+//		'posts_per_page' => 4,
+//		'caller_get_posts' => 1,
+//		'tax_query' => array(
+//			'relation' => 'OR',
+//			array(
+//				'tag__in' => $tag_ids
+//			),
+//			array(
+//				'category__in' => $category_ids,
+//			)
+//		)
+//	);
     $my_query = new wp_query($args);
     if ($my_query->have_posts()) { ?>
         <div class="related-posts">
