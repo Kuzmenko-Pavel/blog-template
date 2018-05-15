@@ -7565,7 +7565,8 @@ a.social-button.color {
   border-radius: 50%;
   padding: .5em; }
   a.social-button.color:hover {
-    border-color: transparent; }
+    border-color: transparent;
+    text-decoration: none; }
   a.social-button.color:before {
     color: #4b4b4b; }
   a.social-button.color:hover:before {
