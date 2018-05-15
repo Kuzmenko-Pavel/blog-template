@@ -34,7 +34,7 @@ if ($posts) : ?>
         </div>
         </div>
 <?php else:
-	$tags = wp_get_post_tags($post->ID);
+	$tags = wp_get_post_tags($orig_post->ID);
 	$tag_ids = array();
 	if ($tags) {
 		foreach ( $tags as $individual_tag ) {
@@ -43,7 +43,7 @@ if ($posts) : ?>
 	}
 	$args = array(
 		'tag__in' => $tag_ids,
-		'post__not_in' => array($post->ID),
+		'post__not_in' => array($orig_post->ID),
 		'posts_per_page' => 4, // Number of related posts to display.
 		'caller_get_posts' => 1
 	);
