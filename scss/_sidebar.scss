@@ -13,8 +13,6 @@
     ul, div {
       padding: 28px 40px;
       background: #fff;
-      line-height: 0;
-      font-size: 0;
       @include b(tablet) {
         padding: 14px 15px;
       }
@@ -62,11 +60,6 @@
   }
 
 }
-.rss-date, .calendar_wrap, .rssSummary {
-  font-size: 16px;
-  line-height: 100%;
-}
-
 
 a.tag-cloud-link {
   display: inline-block;
