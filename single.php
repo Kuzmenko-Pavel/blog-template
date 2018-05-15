@@ -64,13 +64,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div id="readLater">
-
-			            	<a href="mailto:?subject=YOTTOS | <?php the_title(); ?>&amp;body=Почитай статью <?php the_permalink(); ?>" class="to-mail"><i><img src="<?php echo get_template_directory_uri() . '/assets/images/mail.svg' ?>" alt=""></i><span>На почту</span></a>
-		            	</div> -->
 
                             <div class="read-later-social">
-	                            <?php echo do_shortcode('[ess_post share_type="count"]'); ?>
+	                            <?php echo do_shortcode('[ess_post]'); ?>
                             </div>
                         </div>
 
