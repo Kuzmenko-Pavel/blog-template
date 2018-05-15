@@ -34,15 +34,23 @@ if ($posts) : ?>
         </div>
         </div>
 <?php else:
-	$tags = wp_get_post_tags($orig_post->ID);
+	$tags = wp_get_post_tags($orig_post->ID, array('orderby' => 'count', 'fields' => 'ids'));
+    $categories = wp_get_post_categories($orig_post->ID, array('orderby' => 'count', 'fields' => 'ids'));
 	$tag_ids = array();
+	$category_ids = array();
 	if ($tags) {
 		foreach ( $tags as $individual_tag ) {
 			$tag_ids[] = $individual_tag->term_id;
 		}
 	}
+	if ($categories) {
+		foreach ( $categories as $individual_category ) {
+			$category_ids[] = $individual_category->term_id;
+		}
+	}
 	$args = array(
 		'tag__in' => $tag_ids,
+		'category__in' => $category_ids,
 		'post__not_in' => array($orig_post->ID),
 		'posts_per_page' => 4, // Number of related posts to display.
 		'caller_get_posts' => 1
