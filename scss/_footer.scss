@@ -40,7 +40,7 @@
   }
 
   .social-buttons {
-    height: 100px;
+    height: 110px;
     width: 680px;
     position: relative;
     overflow: hidden;
@@ -48,10 +48,7 @@
     padding: 40px 0 0;
 
     .social-button {
-
-      &:not(:first-child) {
-        margin-left: 25px;
-      }
+      margin-left: 5px;
       span {
         display: none;
       }
