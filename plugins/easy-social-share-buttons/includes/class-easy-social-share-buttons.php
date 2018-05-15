@@ -113,9 +113,6 @@ class Easy_Social_Share_Buttons {
 
 		register_activation_hook( $this->file, array( $this, 'install' ) );
 
-		// Load frontend CSS
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ), 10 );
-
 		// Load API for generic admin functions
 		if ( is_admin() ) {
 			$this->admin = new Easy_Social_Share_Buttons_Admin_API();
@@ -139,18 +136,6 @@ class Easy_Social_Share_Buttons {
 
 	} // End __construct ()
 
-	/**
-	 * Load frontend CSS.
-	 * @access  public
-	 * @since   1.0.0
-	 * @return void
-	 */
-	public function enqueue_styles () {
-		if ( !get_option( 'ess_load_css' ) ) {
-			wp_register_style( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'css/frontend' . $this->script_suffix . '.css', array(), $this->_version );
-			wp_enqueue_style( $this->_token . '-frontend' );
-		}
-	} // End enqueue_styles ()
 
 	/**
 	 * Load frontend JS.

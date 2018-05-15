@@ -161,13 +161,6 @@ class Easy_Social_Share_Buttons_Settings {
 			'description'			=> __( 'More customization for experienced Wordpress Theme developers.', 'easy-social-share-buttons' ),
 			'fields'				=> array(
 				array(
-					'id' 			=> 'load_css',
-					'label'			=> __( 'Disable plugin CSS', 'easy-social-share-buttons' ),
-					'description'	=> __( 'Select this if you want to include this plugin\'s CSS within your theme\'s CSS to reduce HTTP requests and increase page load speed, or if you want to customize the buttons with your own styles.', 'easy-social-share-buttons' ),
-					'type'			=> 'checkbox',
-					'default'		=> ''
-				),
-				array(
 					'id' 			=> 'disable_js',
 					'label'			=> __( 'Disable plugin javascript', 'easy-social-share-buttons' ),
 					'description'	=> __( 'Select this if you want to include this plugin\'s scripts within your theme\'s scripts to reduce HTTP requests and increase page load speed.', 'easy-social-share-buttons' ),
