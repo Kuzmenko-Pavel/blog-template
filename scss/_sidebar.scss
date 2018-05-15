@@ -4,12 +4,12 @@
     margin: 0;
     text-decoration: none;
     li, ol {
-      margin-bottom: 40px;
       list-style: none;
     }
   }
   .widget {
     box-shadow: 0 6px 16px 0 rgba(black, .15);
+    margin-bottom: 40px;
     ul, div {
       padding: 28px 40px;
       background: #fff;
