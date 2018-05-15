@@ -7558,15 +7558,15 @@ a.social-button {
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   a.social-button.no-animation {
     transition-property: none !important; }
+  a.social-button:hover, a.social-button:focus {
+    text-decoration: none; }
 
 a.social-button.color {
   display: inline-block;
-  border: 1px solid #4b4b4b;
   border-radius: 50%;
   padding: .5em; }
   a.social-button.color:hover {
-    border-color: transparent;
-    text-decoration: none; }
+    border-color: transparent; }
   a.social-button.color:before {
     color: #4b4b4b; }
   a.social-button.color:hover:before {

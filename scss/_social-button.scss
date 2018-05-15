@@ -107,17 +107,18 @@ a.social-button {
     &.no-animation {
         transition-property: none !important;
     }
+    &:hover, &:focus {
+      text-decoration: none;
+    }
 }
 
 a.social-button.color {
     display: inline-block;
-    border: 1px solid #4b4b4b;
     border-radius: 50%;
     padding: .5em;
 
     &:hover {
         border-color: transparent;
-        text-decoration: none;
     }
 
     &:before {
