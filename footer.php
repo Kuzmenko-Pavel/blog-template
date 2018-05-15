@@ -7,17 +7,17 @@
             </a>
         </nav>
         <div class="social-buttons">
-            <?php locate_template('/includes/plugins/socialmedia_icons.php', true); ?>
+			<?php locate_template( '/includes/plugins/socialmedia_icons.php', true ); ?>
         </div>
     </div>
-    <small>&copy;&nbsp;2006&nbsp;&ndash;&nbsp;<?php echo date('Y'); ?>&nbsp;YOTTOS</small>
-    <?php if (is_active_sidebar('sidebar-footer')) : ?>
+    <small>&copy;&nbsp;2006&nbsp;&ndash;&nbsp;<?php echo date( 'Y' ); ?>&nbsp;YOTTOS</small>
+	<?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
         <div id="sidebar-footer">
             <ul>
-                <?php dynamic_sidebar('sidebar-footer'); ?>
+				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
             </ul>
         </div>
-    <?php endif; ?>
+	<?php endif; ?>
 </footer>
 <?php wp_footer(); ?>
 </body>
