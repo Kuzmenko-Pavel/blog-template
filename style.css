@@ -7025,9 +7025,9 @@ input[type="file"] {
         top: 0;
         right: 0;
         margin: 20px 0; } }
-  .article__postpone svg.ess-icon,
-  .main__postpone svg.ess-icon {
-    height: 30px; }
+  .article__postpone a,
+  .main__postpone a {
+    border: none; }
 
 #thanks, #thanksSubscription {
   display: none; }
