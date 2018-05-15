@@ -268,26 +268,3 @@ body {
     }
   }
 }
-
-a.tag-cloud-link {
-  display: inline-block;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 0;
-  color: #777777;
-  text-decoration: none;
-  font-family: 'SF UI Display', sans-serif;
-  font-weight: 400;
-  padding: 5px;
-  margin: 0 5px 5px 0;
-  line-height: 100%;
-  background: #eeeeee;
-  &:hover, &:focus {
-    color: #777777;
-    text-decoration: none;
-    background: darken(#eee, 5%);
-    border: 0;
-  }
-}
