@@ -351,8 +351,9 @@
         margin: 20px 0;
       }
     }
-    a {
+    a, a:hover, a:focus {
       border: none;
+      text-decoration: none;
     }
   }
 }

@@ -7025,9 +7025,12 @@ input[type="file"] {
         top: 0;
         right: 0;
         margin: 20px 0; } }
-  .article__postpone a,
-  .main__postpone a {
-    border: none; }
+  .article__postpone a, .article__postpone a:hover, .article__postpone a:focus,
+  .main__postpone a,
+  .main__postpone a:hover,
+  .main__postpone a:focus {
+    border: none;
+    text-decoration: none; }
 
 #thanks, #thanksSubscription {
   display: none; }
