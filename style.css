@@ -6424,6 +6424,29 @@ a[rel="tag"], a[rel="category"] {
     background: #e1e1e1;
     border: 0; }
 
+a.tag-cloud-link {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0;
+  color: #777777;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: 'SF UI Display', sans-serif;
+  font-weight: 400;
+  margin-right: 8px;
+  padding: 0 9px;
+  line-height: 20px;
+  height: 20px;
+  background: #eeeeee; }
+  a.tag-cloud-link:hover, a.tag-cloud-link:focus {
+    color: #777777;
+    text-decoration: none;
+    background: #e1e1e1;
+    border: 0; }
+
 html {
   height: 100%; }
 
