@@ -6777,10 +6777,6 @@ input[type="file"] {
     top: 0;
     margin: 0 auto 50px;
     text-align: left; }
-    .article__footer .read-later-social > .ess-icon,
-    .main__footer .read-later-social > .ess-icon {
-      height: 10px;
-      width: 10px; }
 .article__tags,
 .main__tags {
   margin-top: 24px; }
@@ -7035,6 +7031,10 @@ input[type="file"] {
 
 .g-recaptcha > div {
   margin: 0 auto; }
+
+.ess-icon {
+  height: 10px;
+  width: 10px; }
 
 .sidebar ul {
   padding: 0;
