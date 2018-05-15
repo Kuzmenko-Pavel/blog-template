@@ -206,34 +206,34 @@ class acf_field_groups
 		$tab = isset($_GET['info']) ? $_GET['info'] : 'changelog';
 		
 		?>
-<script type="text/html" id="tmpl-acf-column-2">
-<div class="acf-column-2">
-	<div class="wp-box">
-		<div class="inner">
-			<h2><?php _e("Advanced Custom Fields",'acf'); ?> <?php echo $version; ?></h2>
-
-			<h3><?php _e("Changelog",'acf'); ?></h3>
-			<p><?php printf(__('See what\'s new in %1$sversion %2$s%3$s','acf'),'<a href="'.admin_url('edit.php?post_type=acf&info=changelog').'">',$version,'</a>'); ?></p>
-			
-			<h3><?php _e("Resources",'acf'); ?></h3>
-			<ul>
-				<li><a href="http://www.advancedcustomfields.com/resources/#getting-started" target="_blank"><?php _e("Getting Started",'acf'); ?></a></li>
-				<li><a href="http://www.advancedcustomfields.com/resources/#field-types" target="_blank"><?php _e("Field Types",'acf'); ?></a></li>
-				<li><a href="http://www.advancedcustomfields.com/resources/#functions" target="_blank"><?php _e("Functions",'acf'); ?></a></li>
-				<li><a href="http://www.advancedcustomfields.com/resources/#actions" target="_blank"><?php _e("Actions",'acf'); ?></a></li>
-				<li><a href="http://www.advancedcustomfields.com/resources/#filters" target="_blank"><?php _e("Filters",'acf'); ?></a></li>
-				<li><a href="http://www.advancedcustomfields.com/resources/#how-to" target="_blank"><?php _e("'How to' guides",'acf'); ?></a></li>
-				<li><a href="http://www.advancedcustomfields.com/resources/#tutorials" target="_blank"><?php _e("Tutorials",'acf'); ?></a></li>
-			</ul>
-		</div>
-		<div class="footer footer-blue">
-			<ul class="hl">
-				<li><?php _e("Created by",'acf'); ?> Elliot Condon</li>
-			</ul>
-		</div>
-	</div>
-</div>
-</script>
+<!--<script type="text/html" id="tmpl-acf-column-2">-->
+<!--<div class="acf-column-2">-->
+<!--	<div class="wp-box">-->
+<!--		<div class="inner">-->
+<!--			<h2>--><?php //_e("Advanced Custom Fields",'acf'); ?><!-- --><?php //echo $version; ?><!--</h2>-->
+<!---->
+<!--			<h3>--><?php //_e("Changelog",'acf'); ?><!--</h3>-->
+<!--			<p>--><?php //printf(__('See what\'s new in %1$sversion %2$s%3$s','acf'),'<a href="'.admin_url('edit.php?post_type=acf&info=changelog').'">',$version,'</a>'); ?><!--</p>-->
+<!--			-->
+<!--			<h3>--><?php //_e("Resources",'acf'); ?><!--</h3>-->
+<!--			<ul>-->
+<!--				<li><a href="http://www.advancedcustomfields.com/resources/#getting-started" target="_blank">--><?php //_e("Getting Started",'acf'); ?><!--</a></li>-->
+<!--				<li><a href="http://www.advancedcustomfields.com/resources/#field-types" target="_blank">--><?php //_e("Field Types",'acf'); ?><!--</a></li>-->
+<!--				<li><a href="http://www.advancedcustomfields.com/resources/#functions" target="_blank">--><?php //_e("Functions",'acf'); ?><!--</a></li>-->
+<!--				<li><a href="http://www.advancedcustomfields.com/resources/#actions" target="_blank">--><?php //_e("Actions",'acf'); ?><!--</a></li>-->
+<!--				<li><a href="http://www.advancedcustomfields.com/resources/#filters" target="_blank">--><?php //_e("Filters",'acf'); ?><!--</a></li>-->
+<!--				<li><a href="http://www.advancedcustomfields.com/resources/#how-to" target="_blank">--><?php //_e("'How to' guides",'acf'); ?><!--</a></li>-->
+<!--				<li><a href="http://www.advancedcustomfields.com/resources/#tutorials" target="_blank">--><?php //_e("Tutorials",'acf'); ?><!--</a></li>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--		<div class="footer footer-blue">-->
+<!--			<ul class="hl">-->
+<!--				<li>--><?php //_e("Created by",'acf'); ?><!-- Elliot Condon</li>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+<!--</script>-->
 <script type="text/html" id="tmpl-acf-about">
 <!-- acf-about -->
 <div id="acf-about" class="acf-content">
@@ -507,7 +507,7 @@ class acf_field_groups
 	
 	
 	// add column side
-	$('#posts-filter').after( $('#tmpl-acf-column-2').html() );
+//	$('#posts-filter').after( $('#tmpl-acf-column-2').html() );
 	
 	
 	<?php if( $show_tab ): ?>
