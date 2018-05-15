@@ -2,19 +2,6 @@
 $orig_post = $post;
 global $post;
 $posts = get_field('related_posts');
-$tags = wp_get_post_tags($post->ID);
-$tag_ids = array();
-if ($tags) {
-	foreach ( $tags as $individual_tag ) {
-		$tag_ids[] = $individual_tag->term_id;
-	}
-}
-$args = array(
-	'tag__in' => $tag_ids,
-	'post__not_in' => array($post->ID),
-	'posts_per_page' => 4, // Number of related posts to display.
-	'caller_get_posts' => 1
-);
 if ($posts) : ?>
     	<div class="related-posts">
 		<h2>Ещё статьи по теме:</h2>
@@ -47,6 +34,19 @@ if ($posts) : ?>
         </div>
         </div>
 <?php else:
+	$tags = wp_get_post_tags($post->ID);
+	$tag_ids = array();
+	if ($tags) {
+		foreach ( $tags as $individual_tag ) {
+			$tag_ids[] = $individual_tag->term_id;
+		}
+	}
+	$args = array(
+		'tag__in' => $tag_ids,
+		'post__not_in' => array($post->ID),
+		'posts_per_page' => 4, // Number of related posts to display.
+		'caller_get_posts' => 1
+	);
     $my_query = new wp_query($args);
     if ($my_query->have_posts()) { ?>
         <div class="related-posts">
