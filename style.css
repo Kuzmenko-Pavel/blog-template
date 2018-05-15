@@ -7025,16 +7025,14 @@ input[type="file"] {
         top: 0;
         right: 0;
         margin: 20px 0; } }
+    .read-later-social > .ess-icon {
+      height: 30px; }
 
 #thanks, #thanksSubscription {
   display: none; }
 
 .g-recaptcha > div {
   margin: 0 auto; }
-
-.ess-icon {
-  height: 10px;
-  width: 10px; }
 
 .sidebar ul {
   padding: 0;
