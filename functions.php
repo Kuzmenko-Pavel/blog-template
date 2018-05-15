@@ -205,5 +205,10 @@ remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'wp_generator');
 
 
+add_action('after_setup_theme', 'my_load_plugin');
+function my_load_plugin() {
+    include_once(TEMPLATEPATH.'plugins/my-plugin/my-plugin.php');
+}
+
 ?>
 
