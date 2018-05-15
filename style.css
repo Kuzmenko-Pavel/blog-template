@@ -7135,9 +7135,7 @@ input[type="file"] {
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15); }
   .sidebar .widget ul, .sidebar .widget div {
     padding: 28px 40px;
-    background: #fff;
-    line-height: 0;
-    font-size: 0; }
+    background: #fff; }
     @media (max-width: 1023px) {
       .sidebar .widget ul, .sidebar .widget div {
         padding: 14px 15px; } }
