@@ -7103,9 +7103,10 @@ input[type="file"] {
         .sidebar .widget ul li a:hover, .sidebar .widget ul li a:focus, .sidebar .widget .widget_recent_entries ul li a:hover, .sidebar .widget .widget_recent_entries ul li a:focus {
           text-decoration: none;
           border-bottom-style: solid; }
-  .sidebar .widget, .sidebar .widget .calendar_wrap {
-    font-size: 16px;
-    line-height: 100%; }
+
+.rss-date, .calendar_wrap, rssSummary {
+  font-size: 16px;
+  line-height: 100%; }
 
 a.tag-cloud-link {
   display: inline-block;

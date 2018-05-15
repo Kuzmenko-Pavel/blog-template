@@ -59,12 +59,12 @@
         }
       }
     }
-    &, .calendar_wrap {
-      font-size: 16px;
-      line-height: 100%;
-    }
   }
 
+}
+.rss-date, .calendar_wrap, .rssSummary {
+  font-size: 16px;
+  line-height: 100%;
 }
 
 
