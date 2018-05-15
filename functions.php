@@ -28,7 +28,7 @@ function custom_theme_features()
         )
     );
 
-    register_sidebar(array('name' => 'Sidebar Blog', 'id' => 'sidebar-blog'));
+    register_sidebar(array('name' => 'Sidebar Blog Post', 'id' => 'sidebar-blog-post'));
 
     register_sidebar(array('name' => 'Sidebar Pages', 'id' => 'sidebar-pages'));
 

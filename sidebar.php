@@ -1,7 +1,7 @@
 <ul>
 <?php
-if (is_single() && is_active_sidebar('sidebar-blog')) :
-    dynamic_sidebar('sidebar-blog');
+if (is_single() && is_active_sidebar('sidebar-blog-post')) :
+    dynamic_sidebar('sidebar-blog-post');
 elseif (is_search() && is_active_sidebar('sidebar-search')) :
 	dynamic_sidebar('sidebar-search');
 elseif (is_page() && is_active_sidebar('sidebar-pages')) :
