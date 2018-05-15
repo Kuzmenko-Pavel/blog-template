@@ -36,37 +36,21 @@ if ($posts) : ?>
 <?php else:
 	$tags = wp_get_post_tags($orig_post->ID, array('orderby' => 'count', 'fields' => 'ids'));
     $categories = wp_get_post_categories($orig_post->ID, array('orderby' => 'count', 'fields' => 'ids'));
-	$tag_ids = array();
-	$category_ids = array();
-	if ($tags) {
-		foreach ( $tags as $individual_tag ) {
-			$tag_ids[] = $individual_tag->term_id;
-		}
-	}
-	if ($categories) {
-		foreach ( $categories as $individual_category ) {
-			$category_ids[] = $individual_category->term_id;
-		}
-	}
 	$args = array(
 		'posts_per_page' => 4,
-		'caller_get_posts' => 1,
-		'category__in' => $category_ids,
-		'post__not_in' => array($orig_post->ID),
+		'ignore_sticky_posts' => true,
+		'tax_query' => array(
+			'relation' => 'OR',
+            array(
+                'taxonomy' => 'post_tag',
+				'terms' => $tags
+			),
+            array(
+                'taxonomy' => 'category',
+				'terms' => $categories,
+			)
+		)
 	);
-//	$args = array(
-//		'posts_per_page' => 4,
-//		'caller_get_posts' => 1,
-//		'tax_query' => array(
-//			'relation' => 'OR',
-//			array(
-//				'tag__in' => $tag_ids
-//			),
-//			array(
-//				'category__in' => $category_ids,
-//			)
-//		)
-//	);
     $my_query = new wp_query($args);
     if ($my_query->have_posts()) { ?>
         <div class="related-posts">
