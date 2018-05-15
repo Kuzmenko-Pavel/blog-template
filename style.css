@@ -6412,8 +6412,9 @@ a.tag-cloud-link {
   text-decoration: none;
   font-family: 'SF UI Display', sans-serif;
   font-weight: 400;
-  padding: 0 5px;
-  line-height: 150%;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  line-height: 100%;
   background: #eeeeee; }
   a.tag-cloud-link:hover, a.tag-cloud-link:focus {
     color: #777777;
