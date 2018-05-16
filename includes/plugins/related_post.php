@@ -64,11 +64,36 @@ if ( $my_query->have_posts() ) { ?>
                     </h2>
 
                 </div>
-			<?php }
+            <?php
+            }
 			if ($count < 5):
-				while ( $count < 4  ) {
-				    print_r( $post );
-			    }
+                while ( $count < 4  ) {
+                    $count++; ?>
+                <div class="related-item">
+                    <a class="related-item__img" rel="external" href="<?php the_permalink() ?>"
+                       style="background-image:url(<?php
+					   if ( has_post_thumbnail() ) {
+						   echo the_post_thumbnail_url();
+					   } else {
+						   echo get_template_directory_uri() . '/assets/images/placeholder.jpg';
+					   } ?> );">&nbsp;</a>
+                    <div class="article__controls">
+                    <span class="date">
+                        <i class="material-icons">&#xE916;</i>
+                        <span><?php echo get_the_date(); ?></span>
+                    </span>
+						<?php if ( comments_open() || get_comments_number() ) : ?>
+                            <a href="<?php the_permalink(); ?>#comments" class="comments">
+                                <i class="material-icons">&#xE24C;</i>
+                                <span><?php comments_number( '0', '1', '%' ); ?></span>
+                            </a>
+						<?php endif; ?>
+                    </div>
+                    <h2 class="related-item__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                    </h2>
+
+                </div>
+            <?php }
 			endif;?>
         </div>
     </div>
