@@ -4,7 +4,6 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 8,
                                     'orderby' => 'meta_value_num',
                                     'order' => 'DESC'  ) );
 if ( $popularpost->have_posts() ) : ?>
-    <article class="article">
     <section class="article__misc">
     <div class="related-posts">
     <h2>Возможно вам понравяться:</h2>
@@ -37,5 +36,4 @@ if ( $popularpost->have_posts() ) : ?>
 		</div>
 	</div>
     </section>
-    </article>
 <?php endif; ?>

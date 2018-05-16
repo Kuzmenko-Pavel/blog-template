@@ -2,9 +2,13 @@
     <section class="section-main">
         <div class="container">
 				<?php if ( have_posts() ) :?>
-                    <?php get_template_part( '/includes/front/short_article'); ?>
+                    <main class="main">
+						<?php get_template_part( '/includes/front/short_article'); ?>
+                    </main>
 				<?php else: ?>
-					<?php get_template_part( '/includes/front/not-found'); ?>
+                    <article class="article">
+					    <?php get_template_part( '/includes/front/not-found'); ?>
+                    </article>
 				<?php endif; ?>
             <aside class="sidebar">
 				<?php get_sidebar(); ?>

@@ -1,13 +1,17 @@
 <?php get_header(); ?>
     <section class="section-main">
         <div class="container">
-            <div class="container">
-                <div><?php single_term_title(); echo term_description(); ?></div>
-            </div>
 	        <?php if ( have_posts() ) :?>
+            <main class="main">
+                <div class="container">
+                    <div><?php single_term_title(); echo term_description(); ?></div>
+                </div>
 		        <?php get_template_part( '/includes/front/short_article'); ?>
+            </main>
 	        <?php else: ?>
-		        <?php get_template_part( '/includes/front/not-found'); ?>
+                <article class="article">
+			        <?php get_template_part( '/includes/front/not-found'); ?>
+                </article>
 	        <?php endif; ?>
             <aside class="sidebar">
 				<?php get_sidebar(); ?>
