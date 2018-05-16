@@ -32,12 +32,14 @@ endif; ?>
 
 <?php
 $my_query   = new wp_query( $args );
+$count = 0;
 if ( $my_query->have_posts() ) { ?>
     <div class="related-posts">
         <h2>Ещё статьи по теме:</h2>
         <div class="related-items">
 			<?php while ( $my_query->have_posts() ) {
-				$my_query->the_post(); ?>
+				$my_query->the_post();
+				$count++?>
                 <div class="related-item">
                     <a class="related-item__img" rel="external" href="<?php the_permalink() ?>"
                        style="background-image:url(<?php
@@ -62,7 +64,12 @@ if ( $my_query->have_posts() ) { ?>
                     </h2>
 
                 </div>
-			<?php } ?>
+			<?php }
+			if ($count < 5):
+				while ( $count < 4  ) {
+				    print_r( $post );
+			    }
+			endif;?>
         </div>
     </div>
 <?php }
