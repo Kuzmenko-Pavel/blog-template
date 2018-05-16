@@ -9,10 +9,12 @@
 						<?php get_template_part( '/includes/front/short_article'); ?>
                     </main>
 				<?php else: ?>
-                    <article class="article">
+                    <main class="main">
                         <div class="term">
                             <div class="term-search">Результаты поиска по запросу: " <?php the_search_query() ?> "</div>
                         </div>
+                    </main>
+                    <article class="article">
 					    <?php get_template_part( '/includes/front/not-found'); ?>
                     </article>
 				<?php endif; ?>
