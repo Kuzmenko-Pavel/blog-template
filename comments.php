@@ -1,7 +1,7 @@
 <nav class="paging">
 	<?php
 	$paginate_args = array(
-		show_all => false,
+		'show_all' => false,
     );
     paginate_comments_links($paginate_args);
     ?>
