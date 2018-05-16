@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="container">
         <div class="static-header">
-            <div><?php single_term_title(); echo term_description('\'raw\''); ?></div>
+            <div><?php single_term_title(); echo term_description('raw'); ?></div>
         </div>
     </div>
     <section class="section-main">
