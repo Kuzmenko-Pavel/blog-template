@@ -52,5 +52,5 @@
                     полной статье...</a></p>
         </article>
 	<?php endwhile; ?>
+	<?php get_template_part( '/includes/front/paging'); ?>
 </main>
-<?php get_template_part( '/includes/front/paging'); ?>
