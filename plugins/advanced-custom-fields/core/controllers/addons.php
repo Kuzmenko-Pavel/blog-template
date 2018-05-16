@@ -164,14 +164,14 @@ class acf_addons {
 			'description' => __( "jQuery date & time picker", 'acf' ),
 			'thumbnail'   => $dir . 'images/add-ons/date-time-field-thumb.jpg',
 			'active'      => class_exists( 'acf_field_date_time_picker' ),
-			'url'         => 'http://wordpress.org/extend/plugins/acf-field-date-time-picker/'
+			'url'         => 'http://wordpress.org/extend/front/acf-field-date-time-picker/'
 		);
 		$free[] = array(
 			'title'       => __( "Google Map Extended", 'acf' ),
 			'description' => __( "Find addresses and coordinates of a desired location", 'acf' ),
 			'thumbnail'   => $dir . 'images/add-ons/google-maps-field-thumb.jpg',
 			'active'      => class_exists( 'acf_field_google_map_extended' ),
-			'url'         => 'https://wordpress.org/plugins/advanced-custom-fields-google-map-extended/'
+			'url'         => 'https://wordpress.org/front/advanced-custom-fields-google-map-extended/'
 		);
 		$free[] = array(
 			'title'       => __( "Contact Form 7 Field", 'acf' ),
@@ -195,7 +195,7 @@ class acf_addons {
             </div>
 			<?php /*
 	<div class="acf-alert">
-		<p><strong><?php _e("Just updated to version 4?",'acf'); ?></strong> <?php _e("Activation codes have changed to plugins! Download your purchased add-ons",'acf'); ?> <a href="http://www.advancedcustomfields.com/add-ons-download/" target="_blank"><?php _e("here",'acf'); ?></a></p>
+		<p><strong><?php _e("Just updated to version 4?",'acf'); ?></strong> <?php _e("Activation codes have changed to front! Download your purchased add-ons",'acf'); ?> <a href="http://www.advancedcustomfields.com/add-ons-download/" target="_blank"><?php _e("here",'acf'); ?></a></p>
 	</div>
 	*/ ?>
 

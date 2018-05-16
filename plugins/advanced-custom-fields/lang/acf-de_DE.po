@@ -726,12 +726,12 @@ msgstr "Zusatz-Module herunterladen"
 
 # @ acf
 #: core/controllers/field_groups.php:313
-msgid "Activation codes have grown into plugins!"
+msgid "Activation codes have grown into front!"
 msgstr "Aktivierungs-Codes sind Schnee von gestern!"
 
 # @ acf
 #: core/controllers/field_groups.php:314
-msgid "Add-ons are now activated by downloading and installing individual plugins. Although these plugins will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
+msgid "Add-ons are now activated by downloading and installing individual front. Although these front will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
 msgstr "Zusatz-Module werden nun als eigenständige Plugins angeboten und nach der Installation aktiviert. Und obwohl die Zusatz-Module nicht im WordPress Plugin-Verzeichnis aufgeführt sind, können Sie dennoch über die Update-Funktion aktuell gehalten werden."
 
 # @ acf
@@ -921,7 +921,7 @@ msgstr "Übersicht"
 
 # @ acf
 #: core/controllers/field_groups.php:404
-msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which need to be individually downloaded, installed and updated."
+msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate front which need to be individually downloaded, installed and updated."
 msgstr "Bisher wurden alle Zusatz-Module über einen Aktivierungscode (gekauft im ACF Store) aktiviert. In Version 4 werden alle Zusatz-Module als separate Plugins angeboten, die einzeln heruntergeladen, installiert und aktualisiert werden müssen."
 
 # @ acf

@@ -613,13 +613,13 @@ msgid "Download Add-ons"
 msgstr "Скачать аддоны"
 
 #: core/controllers/field_groups.php:313
-msgid "Activation codes have grown into plugins!"
+msgid "Activation codes have grown into front!"
 msgstr "Коды активации выросли до плагинов!"
 
 #: core/controllers/field_groups.php:314
 msgid ""
-"Add-ons are now activated by downloading and installing individual plugins. "
-"Although these plugins will not be hosted on the wordpress.org repository, "
+"Add-ons are now activated by downloading and installing individual front. "
+"Although these front will not be hosted on the wordpress.org repository, "
 "each Add-on will continue to receive updates in the usual way."
 msgstr ""
 "Аддоны теперь активируются скачивая и устанавливая индивидуальные плагины. "
@@ -816,7 +816,7 @@ msgstr "Обзор"
 #: core/controllers/field_groups.php:405
 msgid ""
 "Previously, all Add-ons were unlocked via an activation code (purchased from "
-"the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which "
+"the ACF Add-ons store). New to v4, all Add-ons act as separate front which "
 "need to be individually downloaded, installed and updated."
 msgstr ""
 "Раньше, все аддоны разблокировались с помощью когда активации (купленные в "

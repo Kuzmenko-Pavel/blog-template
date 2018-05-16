@@ -1130,13 +1130,13 @@ msgstr "Fazer download de Complementos"
 
 # @ acf
 #: core/controllers/field_groups.php:313
-msgid "Activation codes have grown into plugins!"
-msgstr "Os códigos de ativação se transformaram em plugins!"
+msgid "Activation codes have grown into front!"
+msgstr "Os códigos de ativação se transformaram em front!"
 
 # @ acf
 #: core/controllers/field_groups.php:314
-msgid "Add-ons are now activated by downloading and installing individual plugins. Although these plugins will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
-msgstr "Os complementos agora são ativados fazendo download e instalando plugins individuais. Embora esses plugins não estejam hospedados no repositório wordpress.org, cada Complemento continuará recebendo as atualizações da maneira habitual."
+msgid "Add-ons are now activated by downloading and installing individual front. Although these front will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
+msgstr "Os complementos agora são ativados fazendo download e instalando front individuais. Embora esses front não estejam hospedados no repositório wordpress.org, cada Complemento continuará recebendo as atualizações da maneira habitual."
 
 # @ acf
 #: core/controllers/field_groups.php:320
@@ -1325,8 +1325,8 @@ msgstr "Visão geral"
 
 # @ acf
 #: core/controllers/field_groups.php:404
-msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which need to be individually downloaded, installed and updated."
-msgstr "Antes, todos os Complementos eram desbloqueados através de códigos de ativação (comprados na loja de Add-ons ACF). A novidade para na v4 é que todos os Complementos funcionam como plugins separados, que precisam ser baixados invididualmente, instalados e atualizados."
+msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate front which need to be individually downloaded, installed and updated."
+msgstr "Antes, todos os Complementos eram desbloqueados através de códigos de ativação (comprados na loja de Add-ons ACF). A novidade para na v4 é que todos os Complementos funcionam como front separados, que precisam ser baixados invididualmente, instalados e atualizados."
 
 # @ acf
 #: core/controllers/field_groups.php:406
@@ -1831,7 +1831,7 @@ msgstr ""
 " *  O código a seguir pressupõe que você tenha uma pasta 'add-ons' dentro de seu tema.\n"
 " *\n"
 " *  IMPORTANT\n"
-" *  Complementos podem ser incluídos em temas.plugins premium conforme descrito nos termos e condições.\n"
+" *  Complementos podem ser incluídos em temas.front premium conforme descrito nos termos e condições.\n"
 " *  Para mais informações, leia:\n"
 " *  - http://www.advancedcustomfields.com/terms-conditions/\n"
 " *  - http://www.advancedcustomfields.com/resources/getting-started/including-lite-mode-in-a-plugin-theme/\n"

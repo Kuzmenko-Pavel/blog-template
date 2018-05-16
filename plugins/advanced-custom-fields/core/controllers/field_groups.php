@@ -307,8 +307,8 @@ class acf_field_groups {
 
                             <h3><?php _e( "Add-ons", 'acf' ); ?></h3>
 
-                            <h4><?php _e( "Activation codes have grown into plugins!", 'acf' ); ?></h4>
-                            <p><?php _e( "Add-ons are now activated by downloading and installing individual plugins. Although these plugins will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way.", 'acf' ); ?></p>
+                            <h4><?php _e( "Activation codes have grown into front!", 'acf' ); ?></h4>
+                            <p><?php _e( "Add-ons are now activated by downloading and installing individual front. Although these front will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way.", 'acf' ); ?></p>
 
 
 							<?php if ( $update_required ): ?>
@@ -373,7 +373,7 @@ class acf_field_groups {
 
                         <div class="acf-alert acf-alert-error">
                             <p>
-                                <strong><?php _e( "Really Important!", 'acf' ); ?></strong> <?php printf( __( 'If you updated the ACF plugin without prior knowledge of such changes, please roll back to the latest %sversion 3%s of this plugin.', 'acf' ), '<a href="http://wordpress.org/extend/plugins/advanced-custom-fields/developers/">', '</a>' ); ?>
+                                <strong><?php _e( "Really Important!", 'acf' ); ?></strong> <?php printf( __( 'If you updated the ACF plugin without prior knowledge of such changes, please roll back to the latest %sversion 3%s of this plugin.', 'acf' ), '<a href="http://wordpress.org/extend/front/advanced-custom-fields/developers/">', '</a>' ); ?>
                             </p>
                         </div>
 
@@ -412,7 +412,7 @@ class acf_field_groups {
 
                         <h3><?php _e( "Overview", 'acf' ); ?></h3>
 
-                        <p><?php _e( "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which need to be individually downloaded, installed and updated.", 'acf' ); ?></p>
+                        <p><?php _e( "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate front which need to be individually downloaded, installed and updated.", 'acf' ); ?></p>
 
                         <p><?php _e( "This page will assist you in downloading and installing each available Add-on.", 'acf' ); ?></p>
 

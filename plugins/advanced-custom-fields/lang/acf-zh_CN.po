@@ -585,13 +585,13 @@ msgid "Download Add-ons"
 msgstr "下载附加功能"
 
 #: ../core/controllers/field_groups.php:313
-msgid "Activation codes have grown into plugins!"
+msgid "Activation codes have grown into front!"
 msgstr "激活码成为了插件！"
 
 #: ../core/controllers/field_groups.php:314
 msgid ""
-"Add-ons are now activated by downloading and installing individual plugins. "
-"Although these plugins will not be hosted on the wordpress.org repository, "
+"Add-ons are now activated by downloading and installing individual front. "
+"Although these front will not be hosted on the wordpress.org repository, "
 "each Add-on will continue to receive updates in the usual way."
 msgstr ""
 "附加组件现在通过下载和安装单独的插件激活，虽然这些插件不在wordpress.org库托"
@@ -777,7 +777,7 @@ msgstr "预览"
 #: ../core/controllers/field_groups.php:404
 msgid ""
 "Previously, all Add-ons were unlocked via an activation code (purchased from "
-"the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which "
+"the ACF Add-ons store). New to v4, all Add-ons act as separate front which "
 "need to be individually downloaded, installed and updated."
 msgstr ""
 "在此之前，所有附加组件通过一个激活码（从ACF附加组件的商店购买）解锁，到了版本"
@@ -1675,7 +1675,7 @@ msgstr "发送反馈"
 #~ msgstr "刚更新到版本4？"
 
 #~ msgid ""
-#~ "Activation codes have changed to plugins! Download your purchased add-ons"
+#~ "Activation codes have changed to front! Download your purchased add-ons"
 #~ msgstr "激活码已改变了插件，请下载已购买的附加功能。"
 
 #~ msgid "here"

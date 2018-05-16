@@ -47,7 +47,7 @@ if ( ! class_exists( 'acf_early_access' ) ):
 			//$this->basename = apply_filters('acf/get_info', 'basename');
 
 
-			// modify plugins transient
+			// modify front transient
 			add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'modify_plugins_transient' ), 10, 1 );
 			add_filter( 'site_transient_update_plugins', array( $this, 'check_plugins_transient' ), 10, 1 );
 
@@ -163,7 +163,7 @@ if ( ! class_exists( 'acf_early_access' ) ):
 
 
 			// connect
-			$response = $this->request( 'http://api.wordpress.org/plugins/info/1.0/advanced-custom-fields' );
+			$response = $this->request( 'http://api.wordpress.org/front/info/1.0/advanced-custom-fields' );
 
 
 			// ensure response is expected object
@@ -338,11 +338,11 @@ if ( ! class_exists( 'acf_early_access' ) ):
 
 			// response
 			$response               = new stdClass();
-			$response->id           = 'w.org/plugins/advanced-custom-fields';
+			$response->id           = 'w.org/front/advanced-custom-fields';
 			$response->slug         = 'advanced-custom-fields';
 			$response->plugin       = $basename;
 			$response->new_version  = $new_version;
-			$response->url          = 'https://wordpress.org/plugins/advanced-custom-fields/';
+			$response->url          = 'https://wordpress.org/front/advanced-custom-fields/';
 			$response->package      = 'https://downloads.wordpress.org/plugin/advanced-custom-fields.' . $new_version . '.zip';
 			$response->tested       = $info['tested'];
 			$response->early_access = $this->access;

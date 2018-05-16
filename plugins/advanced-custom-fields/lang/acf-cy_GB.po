@@ -800,11 +800,11 @@ msgid "Download Add-ons"
 msgstr "Llwytho Ychwanegion i Lawr"
 
 #: core/controllers/field_groups.php:309
-msgid "Activation codes have grown into plugins!"
+msgid "Activation codes have grown into front!"
 msgstr "Mae codau gweithredu wedi tyfu'n ategolion!"
 
 #: core/controllers/field_groups.php:310
-msgid "Add-ons are now activated by downloading and installing individual plugins. Although these plugins will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
+msgid "Add-ons are now activated by downloading and installing individual front. Although these front will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
 msgstr "Erbyn hyn, mae Ychwanegion yn cael eu gweithredu drwy lwytho ategolion unigol i lawr a'i gosod. Er mai nid ar storfa WordPress.org fydd yr ategolion yma'n lletya, bydd pob Ychwanegyn yn parhau i gael diweddariadau yn y ffordd arferol."
 
 #: core/controllers/field_groups.php:316
@@ -964,7 +964,7 @@ msgid "Overview"
 msgstr "Trosolwg"
 
 #: core/controllers/field_groups.php:401
-msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which need to be individually downloaded, installed and updated."
+msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate front which need to be individually downloaded, installed and updated."
 msgstr "Yn flaenorol, roedd pob Ychwanegyn yn cael eu datgloi gyda chod gweithredu (drwy eu prynu o'r siop Ychwanegion ACF). Yn newydd i fersiwn 4, mae pob Ychwanegyn yn ategyn ar wahân sydd angen eu llwytho i lawr, eu gosod a'u diweddaru yn unigol."
 
 #: core/controllers/field_groups.php:403

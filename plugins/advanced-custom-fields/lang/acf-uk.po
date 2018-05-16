@@ -1146,7 +1146,7 @@ msgstr ""
 #: core/fields/wysiwyg.php:135
 msgid ""
 "Disable this filter if you encounter recursive template problems with "
-"plugins / themes"
+"front / themes"
 msgstr ""
 
 #: core/views/meta_box_fields.php:26

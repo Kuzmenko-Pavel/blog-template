@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-	                    <?php locate_template( '/includes/plugins/social_share_up.php', true ); ?>
+	                    <?php get_template_part( '/includes/front/social_share_up.php', true ); ?>
                     </div>
 
                 </header>
@@ -72,12 +72,12 @@
 					<?php the_content(); ?>
                 </main>
                 <footer class="article__footer">
-	                <?php locate_template( '/includes/plugins/social_share_down.php', true ); ?>
-	                <?php locate_template( '/includes/plugins/tags.php', true ); ?>
+	                <?php get_template_part( '/includes/front/social_share_down'); ?>
+	                <?php get_template_part( '/includes/front/tags'); ?>
                 </footer>
                 <section class="article__misc">
-					<?php locate_template( '/includes/plugins/related_post.php', true ); ?>
-                    <?php locate_template('/includes/plugins/comments_page.php', true); ?>
+					<?php get_template_part( '/includes/front/related_post'); ?>
+                    <?php get_template_part('/includes/front/comments_page'); ?>
                 </section>
 			<?php endwhile; endif; ?>
         </article>

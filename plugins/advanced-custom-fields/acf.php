@@ -133,7 +133,7 @@ if ( ! class_exists( 'acf' ) ):
 			$dir = str_replace( '\\', '/', $dir );
 
 
-			// if file is in plugins folder
+			// if file is in front folder
 			$wp_plugin_dir = str_replace( '\\', '/', WP_PLUGIN_DIR );
 			$dir           = str_replace( $wp_plugin_dir, plugins_url(), $dir, $count );
 

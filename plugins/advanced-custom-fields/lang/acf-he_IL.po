@@ -2040,10 +2040,10 @@ msgid "This page will assist you in downloading and installing each available Ad
 msgstr "דף זה יסייע לך בהורדת והתקנת כל הרחבה זמינה."
 
 #
-# <p><?php _e("Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which need to be individually downloaded, installed and updated.",'acf'); ?></p>
+# <p><?php _e("Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate front which need to be individually downloaded, installed and updated.",'acf'); ?></p>
 #
 # wpml-name: 2897b87886da5cd761d1cb1aaceb8e2d
-msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which need to be individually downloaded, installed and updated."
+msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate front which need to be individually downloaded, installed and updated."
 msgstr "בעבר, כל הההרחבות היו נעולות באמצעות קוד הפעלה (שנרכש מחנות ההרחבות של  .ACF חדש בגרסה 4  - כל ההרחבות מגיעות כתוספים נפרדים אשר צריכים להיות מורדים,מותקנים ומעודכנים בנפרד."
 
 #
@@ -2319,18 +2319,18 @@ msgstr "אתר זה משתמש בהרחבות פרימיום שצריך להור
 msgid "All previous Add-ons have been successfully installed"
 msgstr "כל הההרחבות הקודמות הותקנו בהצלחה"
 
-# <h4><?php _e("Activation codes have grown into plugins!",'acf'); ?></h4>
-# <p><?php _e("Add-ons are now activated by downloading and installing individual plugins. Although these plugins will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way.",'acf'); ?></p>
+# <h4><?php _e("Activation codes have grown into front!",'acf'); ?></h4>
+# <p><?php _e("Add-ons are now activated by downloading and installing individual front. Although these front will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way.",'acf'); ?></p>
 #
 # wpml-name: fd730b7d274dfd17ea611f02580a1c12
-msgid "Add-ons are now activated by downloading and installing individual plugins. Although these plugins will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
+msgid "Add-ons are now activated by downloading and installing individual front. Although these front will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
 msgstr "הרחבות עכשיו מופעלות על ידי הורדה וההתקנה של תוספים בודדים. למרות שהתוספים האלה לא מתארחים במאגר wordpress.org כל אחת מההרחבות תמשיך לקבל עדכונים בדרך הרגילה."
 
 #
-# <h4><?php _e("Activation codes have grown into plugins!",'acf'); ?></h4>
-# <p><?php _e("Add-ons are now activated by downloading and installing individual plugins. Although these plugins will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way.",'acf'); ?></p>
+# <h4><?php _e("Activation codes have grown into front!",'acf'); ?></h4>
+# <p><?php _e("Add-ons are now activated by downloading and installing individual front. Although these front will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way.",'acf'); ?></p>
 # wpml-name: 85057405e5c918f085e4195166fa0a0c
-msgid "Activation codes have grown into plugins!"
+msgid "Activation codes have grown into front!"
 msgstr "קודי הפעלה גדלו לתוך התוספים"
 
 # <?php if( $tab == 'download-add-ons' ): ?>

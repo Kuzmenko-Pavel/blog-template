@@ -9,10 +9,10 @@
 						<?php the_content(); ?>
                     </main>
                     <footer class="article__footer">
-	                    <?php locate_template( '/includes/plugins/social_share_down.php', true ); ?>
+	                    <?php get_template_part( '/includes/front/social_share_down'); ?>
                     </footer>
                     <section class="article__misc">
-						<?php locate_template( '/includes/plugins/related_page.php', true ); ?>
+						<?php get_template_part( '/includes/front/related_page'); ?>
                         <!--?php locate_template('/includes/plugins/comments_page.php', true); ?-->
                     </section>
 				<?php endwhile; endif; ?>

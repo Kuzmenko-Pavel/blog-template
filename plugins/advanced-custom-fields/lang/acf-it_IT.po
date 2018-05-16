@@ -606,12 +606,12 @@ msgid "Download Add-ons"
 msgstr "Scarica Add-ons"
 
 #: C:\advanced-custom-fields/core/controllers/field_groups.php:313
-msgid "Activation codes have grown into plugins!"
-msgstr "I codici di attivazione sono stati migrati direttamente all'interno dei plugins!"
+msgid "Activation codes have grown into front!"
+msgstr "I codici di attivazione sono stati migrati direttamente all'interno dei front!"
 
 #: C:\advanced-custom-fields/core/controllers/field_groups.php:314
-msgid "Add-ons are now activated by downloading and installing individual plugins. Although these plugins will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
-msgstr "I plugin aggiuntivi sono ora attivati dopo il download e l'installazione degli stessi. Sebbene questi plugins non siano ospitati nella repository ufficiale di wordpress.org, ogni Add-on continuerà a ricevere aggiornamenti nella solita maniera."
+msgid "Add-ons are now activated by downloading and installing individual front. Although these front will not be hosted on the wordpress.org repository, each Add-on will continue to receive updates in the usual way."
+msgstr "I plugin aggiuntivi sono ora attivati dopo il download e l'installazione degli stessi. Sebbene questi front non siano ospitati nella repository ufficiale di wordpress.org, ogni Add-on continuerà a ricevere aggiornamenti nella solita maniera."
 
 #: C:\advanced-custom-fields/core/controllers/field_groups.php:320
 msgid "All previous Add-ons have been successfully installed"
@@ -770,7 +770,7 @@ msgid "Overview"
 msgstr "Panoramica"
 
 #: C:\advanced-custom-fields/core/controllers/field_groups.php:405
-msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which need to be individually downloaded, installed and updated."
+msgid "Previously, all Add-ons were unlocked via an activation code (purchased from the ACF Add-ons store). New to v4, all Add-ons act as separate front which need to be individually downloaded, installed and updated."
 msgstr "Precedentemente, tutti gli Add-ons dovevano essere sbloccati tramite un codice di attivazione (acquistato dallo store di ACF). Ora, con la versione 4, tutti gli Add-ons agiscono come plugin separati che devono essere scaricati singolarmente, installati ed aggiornati."
 
 #: C:\advanced-custom-fields/core/controllers/field_groups.php:407

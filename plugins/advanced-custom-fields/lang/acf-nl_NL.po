@@ -1081,8 +1081,8 @@ msgid "Enable this filter to use shortcodes within the WYSIWYG field"
 msgstr "Activeer dit filter om shortcodes te gebruiken in het WYSIWYG veld"
 
 #: core/fields/wysiwyg.php:135
-msgid "Disable this filter if you encounter recursive template problems with plugins / themes"
-msgstr "Schakel dit filter uit als je template problemen ondervindt met plugins/thema's."
+msgid "Disable this filter if you encounter recursive template problems with front / themes"
+msgstr "Schakel dit filter uit als je template problemen ondervindt met front/thema's."
 
 #: core/fields/date_picker/date_picker.php:21
 msgid "Date Picker"
