@@ -1,3 +1,6 @@
+<div class="navigation">
+	<?php paginate_comments_links(); ?>
+</div>
 <ul class="article__comments-list">
 	<?php wp_list_comments( 'type=comment&callback=format_comment' ); ?>
 	<?php
@@ -23,9 +26,10 @@
 			<?php echo get_comment_text(); ?>
         </div>
         <div class="comment__reply">
-			<?php comment_reply_link( array_merge( $args, array( 'depth'     => $depth,
-			                                                     'max_depth' => $args['max_depth']
-			) ) ); ?>
+			<?php comment_reply_link(array_merge( $args, array( 'depth'=> $depth, 'max_depth'=> $args['max_depth']))); ?>
         </div>
 	<?php } ?>
 </ul>
+<div class="navigation">
+	<?php paginate_comments_links(); ?>
+</div>
