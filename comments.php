@@ -1,11 +1,13 @@
-<nav class="paging">
-	<?php
-	$paginate_args = array(
-		'show_all' => false,
-    );
-    paginate_comments_links($paginate_args);
-    ?>
-</nav>
+<?php
+$nextp = next_comments_link( 'Предыдущие статьи <i class="material-icons">&#xE409;</i>' );
+$prevp = previous_comments_link( '<i class="material-icons">&#xE408;</i> Следующие статьи' );
+if ( $nextp || $prevp ):
+	?>
+    <nav class="paging">
+        <div class="nav-previous"><?php echo $prevp ?></div>
+        <div class="nav-next"><?php echo $nextp ?></div>
+    </nav>
+<?php endif; ?>
 <ul class="article__comments-list">
 	<?php wp_list_comments( 'type=comment&callback=format_comment' ); ?>
 	<?php
