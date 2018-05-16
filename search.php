@@ -5,8 +5,10 @@
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( '/includes/front/short_article'); ?>
 				<?php endwhile; ?>
+					<?php get_template_part( '/includes/front/paging'); ?>
+				<?php else: ?>
+					<?php get_template_part( '/includes/front/not-found'); ?>
 				<?php endif; ?>
-				<?php get_template_part( '/includes/front/paging'); ?>
             </main>
             <aside class="sidebar">
 				<?php get_sidebar(); ?>
