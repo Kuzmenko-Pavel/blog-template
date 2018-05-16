@@ -213,7 +213,8 @@ body {
     font-size: 50px;
     line-height: 60px;
     color: #424242;
-    margin: 44px 0 23px;
+    margin: 0;
+    padding: 44px 0 23px;
     @include b(tablet) {
       font-size: 30px;
       line-height: 38px;

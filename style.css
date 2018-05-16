@@ -6353,7 +6353,8 @@ body {
   font-size: 50px;
   line-height: 60px;
   color: #424242;
-  margin: 44px 0 23px; }
+  margin: 0;
+  padding: 44px 0 23px; }
   @media (max-width: 1023px) {
     .main h1, .article h1 {
       font-size: 30px;
@@ -6453,7 +6454,6 @@ body {
   width: calc(100% - 400px);
   float: left;
   position: relative;
-  overflow: hidden;
   box-shadow: none;
   background: transparent; }
   @media (max-width: 1199px) {

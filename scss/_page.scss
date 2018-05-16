@@ -54,7 +54,7 @@ body {
   width: calc(100% - 400px);
   float: left;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   box-shadow: none;
   background: transparent;
   @include b(desktop) {
