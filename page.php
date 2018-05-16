@@ -1,7 +1,8 @@
 <?php get_header(); ?>
     <section class="section-main">
         <div class="container">
-            <article class="article">
+            <main class="main">
+                <article class="article">
 				<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 					<?php setPostViews( get_the_ID() ); ?>
                     <main class="article__content">
@@ -16,6 +17,7 @@
                     </section>
 				<?php endwhile; endif; ?>
             </article>
+            </main>
             <aside class="sidebar">
 				<?php get_sidebar(); ?>
             </aside>
