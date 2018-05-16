@@ -1,6 +1,11 @@
-<div class="navigation">
-	<?php paginate_comments_links(); ?>
-</div>
+<nav class="paging">
+	<?php
+	$paginate_args = array(
+		show_all => false,
+    );
+    paginate_comments_links($paginate_args);
+    ?>
+</nav>
 <ul class="article__comments-list">
 	<?php wp_list_comments( 'type=comment&callback=format_comment' ); ?>
 	<?php
@@ -30,6 +35,6 @@
         </div>
 	<?php } ?>
 </ul>
-<div class="navigation">
-	<?php paginate_comments_links(); ?>
-</div>
+<nav class="paging">
+	<?php paginate_comments_links($paginate_args); ?>
+</nav>
