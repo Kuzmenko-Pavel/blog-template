@@ -1,7 +1,7 @@
 <?php
 $orig_post = $post;
 global $post;
-$posts = get_field( 'related_posts' );
+$posts = get_field( 'related_posts', false, false);
 if ( $posts ) :
 	$args       = array(
 		'posts_per_page'      => 4,
