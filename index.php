@@ -3,7 +3,7 @@
         <div class="container">
             <main class="main">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<?php locate_template( '/includes/plugins/short_article.php', true ); ?>
+					<?php get_template_part( 'short_article'); ?>
 				<?php endwhile; ?>
 				<?php endif; ?>
 				<?php
