@@ -1,6 +1,6 @@
 <?php
-$nextp = next_comments_link( 'Предыдущие статьи <i class="material-icons">&#xE409;</i>' );
-$prevp = previous_comments_link( '<i class="material-icons">&#xE408;</i> Следующие статьи' );
+$nextp = next_comments_link( 'Предыдущие коментарии <i class="material-icons">&#xE409;</i>' );
+$prevp = previous_comments_link( '<i class="material-icons">&#xE408;</i> Следующие коментарии' );
 if ( $nextp || $prevp ):
 	?>
     <nav class="paging">
@@ -37,6 +37,11 @@ if ( $nextp || $prevp ):
         </div>
 	<?php } ?>
 </ul>
-<nav class="paging">
-	<?php paginate_comments_links($paginate_args); ?>
-</nav>
+<?php
+if ( $nextp || $prevp ):
+	?>
+    <nav class="paging">
+        <div class="nav-previous"><?php echo $prevp ?></div>
+        <div class="nav-next"><?php echo $nextp ?></div>
+    </nav>
+<?php endif; ?>
