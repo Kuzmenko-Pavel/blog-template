@@ -13,10 +13,10 @@
                         <div class="term">
                             <div class="term-search">Результаты поиска по запросу: " <?php the_search_query() ?> "</div>
                         </div>
+                        <article class="article">
+                            <?php get_template_part( '/includes/front/not-found'); ?>
+                        </article>
                     </main>
-                    <article class="article">
-					    <?php get_template_part( '/includes/front/not-found'); ?>
-                    </article>
 				<?php endif; ?>
             <aside class="sidebar">
 				<?php get_sidebar(); ?>

@@ -9,12 +9,14 @@
 		        <?php get_template_part( '/includes/front/short_article'); ?>
             </main>
 	        <?php else: ?>
-                <article class="article">
+            <main class="main">
                     <div class="term">
                         <div><?php single_term_title(); echo term_description(); ?></div>
                     </div>
+                <article class="article">
 			        <?php get_template_part( '/includes/front/not-found'); ?>
                 </article>
+            </main>
 	        <?php endif; ?>
             <aside class="sidebar">
 				<?php get_sidebar(); ?>

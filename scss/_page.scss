@@ -50,14 +50,13 @@ body {
   }
 }
 
-.article,
 .main {
   width: calc(100% - 400px);
   float: left;
   position: relative;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 6px 16px 0 rgba(black, .15);
+  box-shadow: none;
+  background: transparent;
   @include b(desktop) {
     width: 100%;
     float: none;
@@ -65,9 +64,9 @@ body {
   }
 }
 
-.main {
-  box-shadow: none;
-  background: transparent;
+.article {
+  background: #fff;
+  box-shadow: 0 6px 16px 0 rgba(black, .15);
 }
 
 .paging {
