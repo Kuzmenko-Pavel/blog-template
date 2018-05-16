@@ -7,6 +7,6 @@
     "postinstall": "./node_modules/.bin/bower install"
   },
   "dependencies": {
-    "bootstrap": "3.3.7"
+    "bootstrap-sass": "3.3.7"
   }
 }
