@@ -1,11 +1,9 @@
 <?php get_header(); ?>
-    <div class="container">
-        <div class="static-header">
-            <div><?php single_term_title(); echo term_description(); ?></div>
-        </div>
-    </div>
     <section class="section-main">
         <div class="container">
+            <div class="container">
+                <div><?php single_term_title(); echo term_description(); ?></div>
+            </div>
 	        <?php if ( have_posts() ) :?>
 		        <?php get_template_part( '/includes/front/short_article'); ?>
 	        <?php else: ?>

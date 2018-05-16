@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 	<section class="section-main">
 		<div class="container">
-			<main class="main">
-				<?php get_template_part( '/includes/front/not-found'); ?>
-			</main>
+            <?php get_template_part( '/includes/front/not-found'); ?>
 			<aside class="sidebar">
 				<?php get_sidebar(); ?>
 			</aside>
