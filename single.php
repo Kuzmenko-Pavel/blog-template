@@ -64,15 +64,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="read-later-social">
-                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                                <a class="a2a_button_facebook"></a>
-                                <a class="a2a_button_twitter"></a>
-                                <a class="a2a_button_google_plus"></a>
-                                <a class="a2a_button_linkedin"></a>
-                            </div>
-                        </div>
+	                    <?php locate_template( '/includes/plugins/social_share_up.php', true ); ?>
                     </div>
 
                 </header>
@@ -80,48 +72,12 @@
 					<?php the_content(); ?>
                 </main>
                 <footer class="article__footer">
-                    <div class="read-later-social">
-                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                            <a class="a2a_button_facebook a2a_counter"></a>
-                            <a class="a2a_button_pinterest a2a_counter"></a>
-                            <a class="a2a_button_tumblr a2a_counter"></a>
-                            <a class="a2a_button_twitter a2a_counter"></a>
-                            <a class="a2a_button_google_plus a2a_counter"></a>
-                            <a class="a2a_button_linkedin a2a_counter"></a>
-                            <a class="a2a_button_flipboard a2a_counter"></a>
-                            <a class="a2a_button_pocket a2a_counter"></a>
-                        </div>
-                    </div>
-
-					<?php if ( has_tag() ) { ?>
-                        <div class="article__tags"><i class="material-icons">&#xE892;</i>
-							<?php
-							$tags = get_the_tags();
-							foreach ( $tags as $tag ) {
-								echo '<a href="' . get_tag_link( $tag->term_id ) . '" title="' . $tag->name . '" rel="tag">' . $tag->name . '</a>';
-							}
-
-							$postcats = get_the_category();
-							$ccount   = 0;
-							if ( $postcats ) {
-								echo '<div class="article__tags"><i class="material-icons">&#xE892;</i>';
-								foreach ( $postcats as $cat ) {
-									$ccount ++;
-									echo '<a href="' . get_category_link( $cat->term_id ) . '" title="' . $cat->name . '" rel="tag">' . $cat->name . '</a>';
-									if ( $ccount >= 5 ) {
-										break;
-									} //change the number to adjust the count
-								}
-								echo '</div>';
-							}
-
-							?>
-                        </div>
-					<?php } ?>
+	                <?php locate_template( '/includes/plugins/social_share_down.php', true ); ?>
+	                <?php locate_template( '/includes/plugins/tags.php', true ); ?>
                 </footer>
                 <section class="article__misc">
 					<?php locate_template( '/includes/plugins/related_post.php', true ); ?>
-                    <!--?php locate_template('/includes/plugins/comments_page.php', true); ?-->
+                    <?php locate_template('/includes/plugins/comments_page.php', true); ?>
                 </section>
 			<?php endwhile; endif; ?>
         </article>
