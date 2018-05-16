@@ -14,10 +14,14 @@
 			}
 
 			add_filter( 'comment_form_submit_button', 'comment_form_submit_button' );
+			$commenter = wp_get_current_commenter();
 			$comment_args = array(
 				'title_reply'          => '',
 				'fields'               => apply_filters( 'comment_form_default_fields', array(
-					'author' => '<div class="input-field double"><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><label for="author" class="mdl-textfield__label">Ваше имя</label><input class="mdl-textfield__input" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . ' /></div>',
+					'author' => '<div class="input-field double">
+                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                 <label for="author" class="mdl-textfield__label">Ваше имя</label>
+                                 <input class="mdl-textfield__input" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . ' /></div>',
 					'email'  => '<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"><label for="email" class="mdl-textfield__label">Ваш e-mail</label><input class="mdl-textfield__input" id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' . '</div></div>',
 					'url'    => ''
 				) ),
