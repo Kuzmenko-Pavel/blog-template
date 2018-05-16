@@ -3,12 +3,13 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 4,
                                     'meta_key' => 'post_views_count',
                                     'orderby' => 'meta_value_num',
                                     'order' => 'DESC'  ) );
-if ( $popularpost->have_posts() ) : while ( $popularpost->have_posts() ) : $popularpost->the_post(); ?>
+if ( $popularpost->have_posts() ) : ?>
     <article class="article">
     <section class="article__misc">
-	<div class="related-posts">
-		<h2>Возможно вам понравяться:</h2>
-		<div class="related-items">
+    <div class="related-posts">
+    <h2>Возможно вам понравяться:</h2>
+    <div class="related-items">
+	<?php while ( $popularpost->have_posts() ) : $popularpost->the_post(); ?>
 				<div class="related-item">
 					<a class="related-item__img" rel="external" href="<?php the_permalink() ?>"
 					   style="background-image:url(<?php
@@ -32,9 +33,9 @@ if ( $popularpost->have_posts() ) : while ( $popularpost->have_posts() ) : $popu
 					<h2 class="related-item__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 					</h2>
 				</div>
+	<?php endwhile; ?>
 		</div>
 	</div>
     </section>
     </article>
-<?php endwhile; ?>
 <?php endif; ?>
