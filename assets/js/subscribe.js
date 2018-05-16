@@ -40,6 +40,7 @@
          */
         getAjaxSubmitUrl: function() {
             var url = $("form#mc-embedded-subscribe-form").attr("action");
+            console.log(url);
             url = url.replace("/post?u=", "/post-json?u=");
             url += "&c=?";
             return url;
