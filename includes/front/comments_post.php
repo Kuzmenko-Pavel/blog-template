@@ -15,6 +15,8 @@
 
 			add_filter( 'comment_form_submit_button', 'comment_form_submit_button' );
 			$commenter = wp_get_current_commenter();
+			$req = get_option( 'require_name_email' );
+			$aria_req = ( $req ? " aria-required='true'" : '' );
 			$comment_args = array(
 				'title_reply'          => '',
 				'fields'               => apply_filters( 'comment_form_default_fields', array(
