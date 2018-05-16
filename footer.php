@@ -2,7 +2,7 @@
 <footer class="footer">
     <div class="container">
         <nav class="footer-menu">
-            <a class="navbar-brand" href="javascript:void(0);">
+            <a class="navbar-brand" href="https://yottos.com">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/yottos-logo.svg" alt="yottos">
             </a>
         </nav>

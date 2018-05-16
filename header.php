@@ -10,49 +10,12 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="subscription">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            id="subscriptionDrop"><i class="material-icons">mail</i><span class="subscr-text">Подписаться</span>
-    </button>
-    <form action="" id="subscriptionForm">
-        <h3 class="text-center">Подписаться на рассылку</h3>
-        <div class="input-field">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <label for="name" class="mdl-textfield__label">Ваше имя</label>
-                <input type="text" class="mdl-textfield__input" name="name">
-            </div>
-        </div>
-        <div class="input-field">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <label for="email" class="mdl-textfield__label">Ваш email</label>
-                <input type="text" class="mdl-textfield__input" name="email">
-            </div>
-        </div>
-        <div class="form-action">
-            <input type="reset"
-                   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--default"
-                   value="Я уже">
-            <input type="submit"
-                   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                   value="Отправить">
-        </div>
-    </form>
-
-    <div id="thanksSubscription" class="popup">
-        <h3 class="text-center">Спасибо, что подписались</h3>
-        <p class="text-center"><i class="material-icons" style="font-size: 48px; color:#3a5edc">&#xE86C;</i></p>
-        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной
-            "рыбой" для текстов на латинице с начала XVI века. </p>
-        <div class="actions-block">
-            <a href="#" id="closeSubscription" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Закрыть</a>
-        </div>
-    </div>
-</div>
+<?php get_template_part( '/includes/front/subscription'); ?>
 <div class="page-wrapper">
     <header class="yo-header">
         <div class="container">
             <nav>
-                <a class="navbar-brand" href="http://yottos.com">
+                <a class="navbar-brand" href="https://yottos.com">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/yottos-logo.svg" alt="yottos">
                 </a>
                 <a href="<?php echo get_home_url(); ?>" class="breadcrumb">Блог</a>
