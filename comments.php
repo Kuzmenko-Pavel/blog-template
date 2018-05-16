@@ -38,6 +38,8 @@ if ( $nextp || $prevp ):
 	<?php } ?>
 </ul>
 <?php
+$nextp = next_comments_link( 'Предыдущие коментарии <i class="material-icons">&#xE409;</i>' );
+$prevp = previous_comments_link( '<i class="material-icons">&#xE408;</i> Следующие коментарии' );
 if ( $nextp || $prevp ):
 	?>
     <nav class="paging">
