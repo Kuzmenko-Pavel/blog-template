@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-	                    <?php get_template_part( '/includes/front/social_share_up.php', true ); ?>
+	                    <?php get_template_part( '/includes/front/social_share_up'); ?>
                     </div>
 
                 </header>

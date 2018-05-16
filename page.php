@@ -4,7 +4,6 @@
             <article class="article">
 				<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 					<?php setPostViews( get_the_ID() ); ?>
-
                     <main class="article__content">
 						<?php the_content(); ?>
                     </main>
