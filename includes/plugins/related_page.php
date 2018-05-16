@@ -10,24 +10,24 @@ if ( $posts ) :
 		'post__in' => $posts,
 	);
 else:
-	$tags = wp_get_post_tags( $orig_post->ID, array( 'orderby' => 'count', 'fields' => 'ids' ) );
-	$categories = wp_get_post_categories( $orig_post->ID, array( 'orderby' => 'count', 'fields' => 'ids' ) );
-	$args       = array(
-		'posts_per_page'      => 4,
-		'ignore_sticky_posts' => true,
-		'post__not_in' => array($orig_post->ID),
-		'tax_query'           => array(
-			'relation' => 'OR',
-			array(
-				'taxonomy' => 'post_tag',
-				'terms'    => $tags
-			),
-			array(
-				'taxonomy' => 'category',
-				'terms'    => $categories,
-			)
-		)
-	);
+    $tags = wp_get_post_tags( $orig_post->ID, array( 'orderby' => 'count', 'fields' => 'ids' ) );
+    $categories = wp_get_post_categories( $orig_post->ID, array( 'orderby' => 'count', 'fields' => 'ids' ) );
+    $args       = array(
+    'posts_per_page'      => 4,
+    'ignore_sticky_posts' => true,
+    'post__not_in' => array($orig_post->ID),
+    'tax_query'           => array(
+    'relation' => 'OR',
+    array(
+    'taxonomy' => 'post_tag',
+    'terms'    => $tags
+    ),
+    array(
+    'taxonomy' => 'category',
+    'terms'    => $categories,
+    )
+    )
+    );
 endif; ?>
 
 <?php
@@ -65,7 +65,4 @@ if ( $my_query->have_posts() ) { ?>
 			<?php } ?>
         </div>
     </div>
-<?php }
-$post = $orig_post;
-wp_reset_query();
-?>
+<?php } ?>
