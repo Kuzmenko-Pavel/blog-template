@@ -7,7 +7,7 @@
             </a>
         </nav>
         <div class="social-buttons">
-			<?php locate_template( '/includes/plugins/socialmedia_icons.php', true ); ?>
+			<?php get_template_part( '/includes/plugins/socialmedia_icons'); ?>
         </div>
     </div>
     <small>&copy;&nbsp;2006&nbsp;&ndash;&nbsp;<?php echo date( 'Y' ); ?>&nbsp;YOTTOS</small>
