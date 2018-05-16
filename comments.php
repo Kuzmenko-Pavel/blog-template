@@ -5,7 +5,7 @@
 	function format_comment( $comment, $args, $depth ) {
 
 		$GLOBALS['comment'] = $comment; ?>
-        <li class="article__comments-item" id="comment-"<?php echo get_comment_id(); ?>">
+        <li class="article__comments-item" id="comment-<?php echo get_comment_id(); ?>">
         <div class="comment__header">
     <span class="comment__avatar">
       <?php echo get_avatar( $comment, 32 ); ?>
