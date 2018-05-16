@@ -13,7 +13,7 @@
                     </footer>
                     <section class="article__misc">
 						<?php get_template_part( '/includes/front/related_page'); ?>
-                        <!--?php locate_template('/includes/plugins/comments_page.php', true); ?-->
+						<?php get_template_part('/includes/front/comments'); ?>
                     </section>
 				<?php endwhile; endif; ?>
             </article>
