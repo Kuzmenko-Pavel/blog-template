@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+    <div class="container">
+        <div class="static-header">
+            <div><?php single_term_title('Вы просматриваете раздел: '); ?></div>
+        </div>
+    </div>
     <section class="section-main">
         <div class="container">
             <main class="main">
