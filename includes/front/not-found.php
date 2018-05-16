@@ -4,6 +4,8 @@ $popularpost = new WP_Query( array( 'posts_per_page' => 4,
                                     'orderby' => 'meta_value_num',
                                     'order' => 'DESC'  ) );
 if ( $popularpost->have_posts() ) : while ( $popularpost->have_posts() ) : $popularpost->the_post(); ?>
+    <article class="article">
+    <section class="article__misc">
 	<div class="related-posts">
 		<h2>Возможно вам понравяться:</h2>
 		<div class="related-items">
@@ -32,5 +34,7 @@ if ( $popularpost->have_posts() ) : while ( $popularpost->have_posts() ) : $popu
 				</div>
 		</div>
 	</div>
+    </section>
+    </article>
 <?php endwhile; ?>
 <?php endif; ?>
