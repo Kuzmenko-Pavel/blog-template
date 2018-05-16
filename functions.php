@@ -28,13 +28,18 @@ function custom_theme_features() {
 		)
 	);
 
+	register_sidebar( array( 'name' => 'Sidebar Home', 'id' => 'sidebar-home' ) );
+
 	register_sidebar( array( 'name' => 'Sidebar Blog Post', 'id' => 'sidebar-blog-post' ) );
 
 	register_sidebar( array( 'name' => 'Sidebar Pages', 'id' => 'sidebar-pages' ) );
 
+	register_sidebar( array( 'name' => 'Sidebar Search', 'id' => 'sidebar-search' ) );
+
+	register_sidebar( array( 'name' => 'Sidebar NotFound', 'id' => 'sidebar-not-found' ) );
+
 	register_sidebar( array( 'name' => 'Sidebar Footer', 'id' => 'sidebar-footer' ) );
 
-	register_sidebar( array( 'name' => 'Sidebar Search', 'id' => 'sidebar-search' ) );
 }
 
 add_action( 'after_setup_theme', 'custom_theme_features' );
