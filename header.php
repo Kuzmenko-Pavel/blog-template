@@ -10,13 +10,13 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php get_template_part( '/includes/front/subscription'); ?>
+<?php //get_template_part( '/includes/front/subscription'); ?>
 <div class="page-wrapper">
     <header class="yo-header">
         <div class="container">
             <nav>
                 <a class="navbar-brand" href="https://yottos.com">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/yottos-logo.svg" alt="yottos">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/yottos-logo.svg" alt="yottos">
                 </a>
                 <a href="<?php echo get_home_url(); ?>" class="breadcrumb">Блог</a>
                 <div class="dropdown navbar-right">

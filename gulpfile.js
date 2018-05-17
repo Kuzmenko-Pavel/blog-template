@@ -19,15 +19,15 @@ gulp.task('sass:watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
-gulp.task('js', function() {
-    gulp.src('./js/**/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(rollup({
-            input: './js/main.js',
-            output: {
-                format: 'iife'
-            }
-        }))
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./'));
-});
+// gulp.task('js', function() {
+//     gulp.src('./js/**/*.js')
+//         .pipe(sourcemaps.init())
+//         .pipe(rollup({
+//             input: './js/main.js',
+//             output: {
+//                 format: 'iife'
+//             }
+//         }))
+//         .pipe(sourcemaps.write('./'))
+//         .pipe(gulp.dest('./'));
+// });

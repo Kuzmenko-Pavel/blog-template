@@ -46,7 +46,7 @@ if ( $my_query->have_posts() ) { ?>
 					   if ( has_post_thumbnail() ) {
 						   echo the_post_thumbnail_url();
 					   } else {
-						   echo get_template_directory_uri() . '/assets/images/placeholder.jpg';
+						   echo get_template_directory_uri() . '/images/placeholder.jpg';
 					   } ?> );">&nbsp;</a>
                     <div class="article__controls">
                     <span class="date">
@@ -75,7 +75,7 @@ if ( $my_query->have_posts() ) { ?>
 					   if ( has_post_thumbnail() ) {
 						   echo the_post_thumbnail_url();
 					   } else {
-						   echo get_template_directory_uri() . '/assets/images/placeholder.jpg';
+						   echo get_template_directory_uri() . '/images/placeholder.jpg';
 					   } ?> );">&nbsp;</a>
                     <div class="article__controls">
                     <span class="date">

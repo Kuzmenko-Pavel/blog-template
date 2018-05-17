@@ -9,10 +9,10 @@
     "gulp-sourcemaps": "^2.6.4",
     "rollup": "^0.59.1"
   },
-  "scripts": {
-    "postinstall": "./node_modules/.bin/bower install"
-  },
+  "scripts": {},
   "dependencies": {
-    "bootstrap-sass": "3.3.7"
+    "bootstrap-sass": "3.3.7",
+    "material-design-lite": "^1.3.0",
+    "material-icons": "^0.2.3"
   }
 }

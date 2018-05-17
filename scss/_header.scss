@@ -34,7 +34,7 @@
         content: "";
         display: inline-block;
         position: relative;
-        background: url(assets/images/arrow.svg) no-repeat;
+        background: url(images/arrow.svg) no-repeat;
         background-size: contain;
         width: 18px;
         height: 18px;
@@ -142,7 +142,7 @@
   }
 
   .glyphicon-menu-btn:after {
-    content: url(assets/images/ic_menu_black_24px.svg);
+    content: url(images/ic_menu_black_24px.svg);
   }
 
   &.shady {

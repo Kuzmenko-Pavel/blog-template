@@ -3,7 +3,7 @@
     <div class="container">
         <nav class="footer-menu">
             <a class="navbar-brand" href="https://yottos.com">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/yottos-logo.svg" alt="yottos">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/yottos-logo.svg" alt="yottos">
             </a>
         </nav>
         <div class="social-buttons">
