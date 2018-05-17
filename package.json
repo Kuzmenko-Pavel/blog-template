@@ -2,6 +2,12 @@
   "name": "blog-template",
   "version": "0.2.0",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rollup": "^2.16.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "rollup": "^0.59.1"
   },
   "scripts": {
     "postinstall": "./node_modules/.bin/bower install"
