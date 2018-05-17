@@ -15,7 +15,6 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('style.css'))
-        .pipe(stripCssComments())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
         .pipe(stripCssComments({preserve: false}))

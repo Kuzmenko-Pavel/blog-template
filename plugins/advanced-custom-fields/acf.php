@@ -151,7 +151,6 @@ if ( ! class_exists( 'acf' ) ):
 				$dir    = str_replace( $wp_dir, site_url( '/' ), $dir );
 			}
 
-
 			return $dir;
 		}
 

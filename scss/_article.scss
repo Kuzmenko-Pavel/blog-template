@@ -92,8 +92,8 @@
     }
   }
   &__footer {
-    margin: 26px 0 0;
-    padding: 38px 40px;
+    margin: 25px 0 0;
+    padding: 25px 40px;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
     @include b(tablet) {
@@ -340,22 +340,6 @@
         background: #eeeeee;
       }
     }
-    @at-root .read-later-social {
-      position: absolute;
-      top: 6px;
-      right: 0;
-      text-align: center;
-      @include b(mobile) {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin: 20px 0;
-      }
-      a, a:hover, a:focus {
-        border: none;
-        text-decoration: none;
-      }
-    }
   }
 }
 
@@ -366,5 +350,24 @@
 .g-recaptcha {
   & > div {
     margin: 0 auto;
+  }
+}
+.article__footer .read-later-social{
+  margin-bottom: 25px;
+}
+.read-later-social {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  text-align: center;
+  @include b(mobile) {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 20px 0;
+  }
+  a, a:hover, a:focus {
+    border: none;
+    text-decoration: none;
   }
 }
