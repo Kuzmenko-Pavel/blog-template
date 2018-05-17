@@ -3,10 +3,14 @@
   "version": "0.2.0",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.3",
     "gulp-rollup": "^2.16.2",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-strip-css-comments": "^2.0.0",
+    "merge-stream": "^1.0.1",
     "rollup": "^0.59.1"
   },
   "scripts": {},
