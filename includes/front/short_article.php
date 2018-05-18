@@ -3,12 +3,15 @@
 
 		<?php if ( has_post_thumbnail() ) { ?>
             <div class="article__thumb">
-                <a href="<?php the_permalink(); ?>">
+                <a href="<?php the_permalink(); ?>" title="<?php echo wp_strip_all_tags(get_the_excerpt());?>">
                     <img src="<?php the_post_thumbnail_url(); ?>">
                 </a>
             </div>
 		<?php } ?>
-        <h2 class="article__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <h2 class="article__title">
+            <a href="<?php the_permalink(); ?>"
+               title="<?php echo wp_strip_all_tags(get_the_excerpt());?>"
+            ><?php the_title(); ?></a>
         </h2>
         <div class="article__excerpt"><?php the_content( '' ); ?></div>
 	    <?php get_template_part( '/includes/front/counters' ); ?>

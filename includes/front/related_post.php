@@ -41,13 +41,14 @@ if ( $my_query->have_posts() ) { ?>
 				$my_query->the_post();
 				$count++?>
                 <div class="related-item">
-                    <a class="related-item__img" rel="external" href="<?php the_permalink() ?>"
+                    <a class="related-item__img" rel="tag" href="<?php the_permalink() ?>"
+                       title="<?php echo wp_strip_all_tags(get_the_excerpt());?>"
                        style="background-image:url(<?php
 					   if ( has_post_thumbnail() ) {
 						   echo the_post_thumbnail_url();
 					   } else {
 						   echo get_template_directory_uri() . '/images/placeholder.jpg';
-					   } ?> );">&nbsp;</a>
+					   } ?> );"><?php the_title(); ?></a>
                     <div class="article__controls">
                     <span class="date">
                         <i class="material-icons">&#xE916;</i>
@@ -60,7 +61,10 @@ if ( $my_query->have_posts() ) { ?>
                             </a>
 						<?php endif; ?>
                     </div>
-                    <h2 class="related-item__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                    <h2 class="related-item__title">
+                        <a href="<?php the_permalink() ?>"
+                           title="<?php echo wp_strip_all_tags(get_the_excerpt());?>"
+                        ><?php the_title(); ?></a>
                     </h2>
 
                 </div>
