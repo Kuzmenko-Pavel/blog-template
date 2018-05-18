@@ -1,7 +1,8 @@
 require(['vendor/jquery', 'vendor/flexmenu', './shady_header', 'vendor/mdl'], function ($, flexmenu, shadyHeader, mdl) {
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js');
-    }
+    //ServiceWorker
+    // if ('serviceWorker' in navigator) {
+    //     navigator.serviceWorker.register('service-worker.js');
+    // }
     //BLOG MENU START
     $(document).ready(function () {
         $('#topMenu .menu-list').flexMenu({

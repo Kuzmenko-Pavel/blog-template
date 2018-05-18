@@ -8,7 +8,7 @@
 			<?php
 			function comment_form_submit_button( $button ) {
 				$button =
-					'<button class="action-link btn-default mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Оставить комментарий</button>' . get_comment_id_fields();
+					'<button class="action-link mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Оставить комментарий</button>' . get_comment_id_fields();
 
 				return $button;
 			}

@@ -1,5 +1,5 @@
 <a href="#readLater"
-   class="popup-link btn-default mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Нет
+   class="popup-link mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Нет
 	времени читать?</a>
 <div class="popup-wrap">
 	<form id="readLater" class="popup">

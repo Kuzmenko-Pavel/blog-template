@@ -11,7 +11,11 @@
     elseif ( is_404() && is_active_sidebar( 'sidebar-not-found' ) ) :
 		dynamic_sidebar( 'sidebar-not-found' );
 	else :
-		the_widget( 'WP_Widget_Recent_Posts', 'title=Популярные записи&number=10' );
-		the_widget( 'WP_Widget_Tag_Cloud', 'title=Теги' );
+		$args = array(
+			'before_widget' => '<li class="widget %s">',
+			'after_widget'  => "</li>",
+        );
+		the_widget( 'WP_Widget_Recent_Posts', 'title=Популярные записи&number=10', $args);
+		the_widget( 'WP_Widget_Tag_Cloud', 'title=Теги', $args);
 	endif; ?>
 </ul>
