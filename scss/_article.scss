@@ -370,4 +370,11 @@
     border: none;
     text-decoration: none;
   }
+  .a2a_count {
+    display: none;
+
+  }
+  a:hover .a2a_count{
+    display: block;
+  }
 }

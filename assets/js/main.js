@@ -24,22 +24,6 @@ $(function () {
             }
         }
     };
-    $('#topMenu .menu-list').flexMenu({
-        linkText: 'Еще',
-        linkTextAll: 'Еще'
-    });
-
-    $(document).on('mouseup touchend', function (e) {
-        if (!$(e.target).closest('.flexMenu-popup, .flexMenu-popup *, .flexMenu-viewMore > a').length) {
-            $('.flexMenu-popup').slideUp(300);
-        }
-    });
-
-    shadyHeader();
-
-    $(window).scroll(function () {
-        shadyHeader();
-    });
 
 
     // Dropdown
@@ -51,21 +35,6 @@ $(function () {
         e.preventDefault();
 
     });
-
-
-    //SmoothScroll
-    function shadyHeader() {
-
-        var header = $('header'),
-            headerPos = header.offset().top,
-            breakpoint = $(window).innerHeight() - 80;
-
-        if (headerPos > breakpoint) {
-            header.addClass('shady');
-        } else {
-            header.removeClass('shady');
-        }
-    }
 
 
     // Popup

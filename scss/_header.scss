@@ -304,6 +304,9 @@
     }
     &-form {
       position: relative;
+      label{
+        margin: 0;
+      }
     }
     &-submit {
       position: absolute;
