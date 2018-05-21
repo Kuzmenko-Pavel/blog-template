@@ -28,7 +28,7 @@
 					wp_nav_menu( array(
 							'theme_location' => 'top_dropdown',
 							'container'      => false,
-							'menu_class'     => 'mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect',
+							'menu_class'     => 'mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect nav-menu',
 							'items_wrap' => '<ul id="%1$s" class="%2$s" data-mdl-for="top_dropdown">%3$s</ul>'
 						)
 					);

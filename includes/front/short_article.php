@@ -13,7 +13,11 @@
                title="<?php echo wp_strip_all_tags(get_the_excerpt());?>"
             ><?php the_title(); ?></a>
         </h2>
-        <div class="article__excerpt"><?php the_content( '' ); ?></div>
+        <div class="article__excerpt">
+            <p>
+                <?php echo wp_strip_all_tags(apply_filters( 'the_content', get_the_content( '')));?>
+            </p>
+        </div>
 	    <?php get_template_part( '/includes/front/counters' ); ?>
 	    <?php get_template_part( '/includes/front/tags' ); ?>
         <p style="text-align:right; margin: 0; padding: 25px 0 0;"><a

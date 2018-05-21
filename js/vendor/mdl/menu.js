@@ -55,6 +55,7 @@ define([], function () {
         RIPPLE: 'mdl-ripple',
         // Statuses
         IS_UPGRADED: 'is-upgraded',
+        SHADOW: 'mdl-shadow--8dp',
         IS_VISIBLE: 'is-visible',
         IS_ANIMATING: 'is-animating',
         // Alignment options
@@ -160,7 +161,7 @@ define([], function () {
     MaterialMenu.prototype.handleForClick_ = function (evt) {
         if (this.element_ && this.forElement_) {
             var rect = this.forElement_.getBoundingClientRect();
-            var forRect = this.forElement_.parentElement.getBoundingClientRect();
+            var forRect = this.forElement_.parentElement.parentElement.getBoundingClientRect();
 
             if (this.element_.classList.contains(this.CssClasses_.UNALIGNED)) {
                 // Do not position the menu automatically. Requires the developer to
@@ -168,9 +169,9 @@ define([], function () {
             } else if (this.element_.classList.contains(
                     this.CssClasses_.BOTTOM_RIGHT)) {
                 // Position below the "for" element, aligned to its right.
-                this.container_.style.right = (forRect.right - rect.right) + 'px';
+                this.container_.style.right = forRect.left + 'px';
                 this.container_.style.top =
-                    this.forElement_.offsetTop + this.forElement_.offsetHeight + 'px';
+                    this.forElement_.parentElement.offsetTop + this.forElement_.parentElement.offsetHeight + 10 + 'px';
             } else if (this.element_.classList.contains(this.CssClasses_.TOP_LEFT)) {
                 // Position above the "for" element, aligned to its left.
                 this.container_.style.left = this.forElement_.offsetLeft + 'px';
@@ -376,6 +377,7 @@ define([], function () {
                 this.element_.classList.add(this.CssClasses_.IS_ANIMATING);
                 this.element_.style.clip = 'rect(0 ' + width + 'px ' + height + 'px 0)';
                 this.container_.classList.add(this.CssClasses_.IS_VISIBLE);
+                this.container_.classList.add(this.CssClasses_.SHADOW);
             }.bind(this));
 
             // Clean up after the animation is complete.
@@ -423,6 +425,7 @@ define([], function () {
             this.element_.classList.add(this.CssClasses_.IS_ANIMATING);
             this.applyClip_(height, width);
             this.container_.classList.remove(this.CssClasses_.IS_VISIBLE);
+            this.container_.classList.remove(this.CssClasses_.SHADOW);
 
             // Clean up after the animation is complete.
             this.addAnimationEndListener_();
