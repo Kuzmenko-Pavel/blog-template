@@ -261,9 +261,6 @@
         background-position: center;
         margin-bottom: 20px;
         border: 0;
-        @include b(mobile) {
-          margin: 0 -15px 15px;
-        }
         &:hover {
           opacity: .8;
         }

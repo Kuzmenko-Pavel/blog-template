@@ -199,7 +199,7 @@ if (!is_admin()) add_filter('script_loader_tag', 'add_async_defer_attribute', 20
 function add_stylesheet_min( $stylesheet_uri, $stylesheet_dir_uri ) {
 	return trailingslashit( $stylesheet_dir_uri ) . 'style.min.css';
 }
-add_filter('stylesheet_uri', 'add_stylesheet_min', 20, 2);
+//add_filter('stylesheet_uri', 'add_stylesheet_min', 20, 2);
 
 //clean oembed
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );

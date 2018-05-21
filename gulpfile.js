@@ -15,7 +15,7 @@ gulp.task('sass', function () {
     return gulp.src('./scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(stripCssComments())
+        // .pipe(stripCssComments())
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))

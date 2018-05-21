@@ -1,0 +1,29 @@
+*{margin:0px;padding:0px;}
+html {
+	width: 770px;
+	margin: 0 auto;
+	background: #eeeeee;
+}
+body.mceContentBody {
+	background: #fff;
+	box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15);
+	width: 690px;
+	border: 40px solid white;
+}
+
+p {
+	font-family: 'SF UI Display', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0 0 1em;
+	margin: 0;
+	color: #777777;
+}
+img.size-full{
+	width: calc(100% + 80px);
+	max-width: calc(100% + 80px) !important;
+	min-width: calc(100% + 80px);
+	margin: 1em -40px !important;
+	display: block;
+	height: auto;
+}
