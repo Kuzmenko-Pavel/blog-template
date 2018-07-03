@@ -369,7 +369,7 @@ define([], function () {
             }
 
             // Apply the initial clip to the text before we start animating.
-            this.applyClip_(height, width);
+            // this.applyClip_(height, width);
 
             // Wait for the next frame, turn on animation, and apply the final clip.
             // Also make it visible. This triggers the transitions.
@@ -377,7 +377,7 @@ define([], function () {
                 this.element_.classList.add(this.CssClasses_.IS_ANIMATING);
                 this.element_.style.clip = 'rect(0 ' + width + 'px ' + height + 'px 0)';
                 this.container_.classList.add(this.CssClasses_.IS_VISIBLE);
-                this.container_.classList.add(this.CssClasses_.SHADOW);
+                this.outline_.classList.add(this.CssClasses_.SHADOW);
             }.bind(this));
 
             // Clean up after the animation is complete.
@@ -425,7 +425,7 @@ define([], function () {
             this.element_.classList.add(this.CssClasses_.IS_ANIMATING);
             this.applyClip_(height, width);
             this.container_.classList.remove(this.CssClasses_.IS_VISIBLE);
-            this.container_.classList.remove(this.CssClasses_.SHADOW);
+            this.outline_.classList.remove(this.CssClasses_.SHADOW);
 
             // Clean up after the animation is complete.
             this.addAnimationEndListener_();

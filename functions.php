@@ -41,9 +41,7 @@ function custom_theme_features() {
 	register_sidebar( array( 'name' => 'Sidebar Footer', 'id' => 'sidebar-footer' ) );
 
 }
-
 add_action( 'after_setup_theme', 'custom_theme_features' );
-
 
 // include Admin Files
 locate_template( '/includes/admin/theme-settings.php', true );
@@ -86,6 +84,8 @@ function enqueue_scripts() {
 	wp_enqueue_script( 'yo-script', $in_footer=true);
 
 	$params = array(
+		'nonce' => wp_create_nonce('myajax-nonce'),
+		'ajax_site_url' => admin_url('admin-ajax.php'),
 		'post_id' => $post->ID,
 		'localize' => 'custom',
 		'track_links' => 'ga'
@@ -141,6 +141,22 @@ function setPostViews( $postID ) {
 		$count ++;
 		update_post_meta( $postID, $count_key, $count );
 	}
+}
+
+function ajaxSetPostViews() {
+	check_ajax_referer( 'myajax-nonce', 'nonce_code' );
+	if( ! wp_verify_nonce( $_POST['nonce_code'], 'myajax-nonce' ) )
+	{
+		print_r('Stop!');
+		die( 'Stop!');
+	}
+	$postID = intval( $_POST['post_id'] );
+	setPostViews($postID);
+	wp_die();
+}
+if( wp_doing_ajax() ){
+	add_action( 'wp_ajax_spc', 'ajaxSetPostViews' );
+	add_action( 'wp_ajax_nopriv_spc', 'ajaxSetPostViews' );
 }
 
 
@@ -199,7 +215,7 @@ if (!is_admin()) add_filter('script_loader_tag', 'add_async_defer_attribute', 20
 function add_stylesheet_min( $stylesheet_uri, $stylesheet_dir_uri ) {
 	return trailingslashit( $stylesheet_dir_uri ) . 'style.min.css';
 }
-//add_filter('stylesheet_uri', 'add_stylesheet_min', 20, 2);
+add_filter('stylesheet_uri', 'add_stylesheet_min', 20, 2);
 
 //clean oembed
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );

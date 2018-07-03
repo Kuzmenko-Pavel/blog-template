@@ -1,4 +1,7 @@
-require(['vendor/jquery', 'vendor/flexmenu', './shady_header', 'vendor/mdl'], function ($, flexmenu, shadyHeader, mdl) {
+require(['vendor/jquery', 'vendor/flexmenu', './shady_header', 'vendor/mdl',
+    './set_count_post_view'],
+    function ($, flexmenu, shadyHeader, mdl, set_count_post_view) {
+    $.ajaxSetup({ cache: false });
     //ServiceWorker
     // if ('serviceWorker' in navigator) {
     //     navigator.serviceWorker.register('service-worker.js');
@@ -9,6 +12,7 @@ require(['vendor/jquery', 'vendor/flexmenu', './shady_header', 'vendor/mdl'], fu
             linkText: 'Еще',
             linkTextAll: 'Еще'
         });
+        set_count_post_view();
     });
 
     $(document).on('mouseup touchend', function (e) {

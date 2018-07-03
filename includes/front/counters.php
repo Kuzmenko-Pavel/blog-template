@@ -5,7 +5,7 @@
     </span>
     <span class="views">
         <i class="material-icons">&#xE417;</i>
-        <span><?php echo getPostViews( get_the_ID() ); ?></span>
+        <span class="post_views" data-id="get_the_ID()"><?php echo getPostViews( get_the_ID() ); ?></span>
     </span>
 	<?php if ( comments_open() || get_comments_number() ) : ?>
         <a href="<?php the_permalink(); ?>#comments" class="comments">
