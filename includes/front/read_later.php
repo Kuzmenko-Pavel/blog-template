@@ -1,7 +1,6 @@
 <a href="#readLater" class="popup-link mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Нет времени читать?</a>
 <div class="popup-wrap">
-	< id="readLater" class="popup">
-        <input type="email" name="email" class="mdl-textfield__input" data-required>
+	<form id="readLater" class="popup">
 		<a href="#" class="close-btn">&times;</a>
 		<h3>Отправить на почту</h3>
 		<div class="input-field required">
@@ -10,7 +9,7 @@
                 <input type="email" name="email" class="mdl-textfield__input" data-required>
 			</div>
 		</div>
-		<div class="g-recaptcha" data-sitekey="6Lc4FFgUAAAAAG8DZesnBpfuSRIE1jq3oBJKjpcu"></div>
+		<div class="g-recaptcha" data-sitekey="6Ldq4AgUAAAAAAGGRNG2GVnicSoTHfY74-s85jgO"></div>
 		<div class="actions-block">
 			<button type="submit"
 			        class="mdl-button--accent mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">

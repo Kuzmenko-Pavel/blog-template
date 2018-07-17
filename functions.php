@@ -159,8 +159,22 @@ if( wp_doing_ajax() ){
 }
 
 
-function sendPostToEmail( $postID ){
-
+function sendPostToEmail( $postID, $mail ){
+	$post = get_post( $postID);
+	$title = $post->post_title;
+	$post_content = $post->post_content;
+	$url = get_permalink($post);
+	$subject = $title;
+	$message = "
+                <h1><a href='".$url."'>".$title."</a></h1>
+                <p>".$post_content."</p>
+                <p><a href='".$url."'>".$url."</a></p>
+            ";
+	$headers = array(
+		'From: Blog Yottos <support@yottos.com>',
+		'Content-Type: text/html; charset=UTF-8'
+	);
+	wp_mail( $mail, $subject, $message, $headers);
 }
 
 
@@ -171,13 +185,41 @@ function ajaxReadLater() {
 		die( 'Stop!');
 	}
 	$postID = intval( $_POST['post_id'] );
-	sendPostToEmail($postID);
+	$mail = $_POST['email'];
+	$url = 'https://www.google.com/recaptcha/api/siteverify';
+	$data = array(
+		"secret" => '6Ldq4AgUAAAAABqk_AxyOWPIXPjB5s0OK9o3kk9U',
+		"response" => $_POST["g-recaptcha-response"],
+		"remoteip" => $_SERVER['REMOTE_ADDR']
+	);
+	$opts = [
+		"http" => [
+			"method" => "POST",
+			"header" => "Accept-language: en",
+			"content" => http_build_query($data)
+		]
+	];
+
+	$context = stream_context_create($opts);
+	$verifyResponse = file_get_contents($url, false, $context);
+	$captcha_success = json_decode($verifyResponse);
+	if($captcha_success->success==1) {
+		sendPostToEmail( $postID, $mail );
+	}
 	wp_die();
 }
 if( wp_doing_ajax() ){
 	add_action( 'wp_ajax_rl', 'ajaxReadLater' );
 	add_action( 'wp_ajax_nopriv_rl', 'ajaxReadLater' );
 }
+
+function action_wp_mail_failed($wp_error)
+{
+	return error_log(print_r($wp_error, true));
+}
+
+// add the action
+add_action('wp_mail_failed', 'action_wp_mail_failed', 10, 1);
 
 
 // Add it to a column in WP-Admin
