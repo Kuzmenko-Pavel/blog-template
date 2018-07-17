@@ -47,5 +47,4 @@ require(['vendor/jquery', 'vendor/flexmenu', './shady_header', 'vendor/mdl',
             shadyHeader();
         });
 
-
     });

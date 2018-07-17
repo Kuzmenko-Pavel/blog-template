@@ -20,7 +20,7 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
         .pipe(stripCssComments({preserve: false}))
-        // .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./'));
 });
@@ -38,8 +38,8 @@ gulp.task('js', function () {
         findNestedDependencies: true,
         preserveLicenseComments: false,
         wrap: true,
-        // optimize: 'uglify2',
-        optimize: 'none',
+        optimize: 'uglify2',
+        // optimize: 'none',
         uglify2: {
             output: {
                 beautify: false,
