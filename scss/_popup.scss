@@ -68,12 +68,13 @@
   h3 {
     text-align: center;
   }
-  .popup-link {
-    color: #287EF5;
-    font-weight: 400;
-    font-size: 16px;
-    @media (max-width: 767px) {
-      font-size: 12px;
-    }
+}
+.popup-link {
+  color: #287EF5;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 10px;
+  @media (max-width: 767px) {
+    font-size: 12px;
   }
 }

@@ -2838,6 +2838,9 @@ small,
 .small {
   font-size: 85%; }
 
+.text-center {
+  text-align: center; }
+
 ul, ol {
   margin-top: 0;
   margin-bottom: 10px; }
@@ -3122,7 +3125,7 @@ button, [type="button"], .button, .mdl-button {
 @media (max-width: 767px) {
   .mdl-button:not(.round-button):not(.login-link):not(.dropdown-toggle) {
     width: 100%;
-    margin: 0 auto 10px; }
+    margin: 5px auto 10px; }
   .navbar-right {
     float: right; }
     .navbar-right .dropdown-menu {
@@ -4133,7 +4136,7 @@ a.tag-cloud-link {
     @media (max-width: 1025px) {
       .yo-header nav .breadcrumb {
         line-height: 60px; } }
-    @media (max-width: 640px) {
+    @media (max-width: 300px) {
       .yo-header nav .breadcrumb {
         display: none; } }
   .yo-header nav .navbar-right {
@@ -4680,6 +4683,72 @@ a.social-button.borderless {
     background: transparent; }
 
 /*!@import 'popup';*/
+.popup-wrap {
+  display: flex !important;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  transition: all .4s ease-in-out; }
+  .popup-wrap .popup {
+    width: 500px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    top: -150%;
+    transform: translateY(-50%);
+    transition: all .4s ease-in-out; }
+    .popup-wrap .popup .actions-block {
+      margin: 25px auto 10px;
+      text-align: center; }
+      .popup-wrap .popup .actions-block .action-link {
+        margin: auto 15px;
+        font-weight: 500;
+        font-size: 22px; }
+        @media (max-width: 480px) {
+          .popup-wrap .popup .actions-block .action-link {
+            font-size: 16px; } }
+  .popup-wrap.show {
+    opacity: 1;
+    visibility: visible; }
+    .popup-wrap.show .popup {
+      top: 50%; }
+  .popup-wrap .close-btn {
+    display: block;
+    color: #C3C3C3;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0; }
+  .popup-wrap h3 {
+    text-align: center; }
+
+.popup-link {
+  color: #287EF5;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 10px; }
+  @media (max-width: 767px) {
+    .popup-link {
+      font-size: 12px; } }
+
 /*!@import 'subscription';*/
 
 

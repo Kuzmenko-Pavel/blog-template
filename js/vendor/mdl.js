@@ -1,4 +1,4 @@
-define(['./mdl/menu'], function (MaterialMenu) {
+define(['./mdl/menu', './mdl/textfield'], function (MaterialMenu, MaterialTextfield) {
     var componentHandler = {
         /**
          * Searches existing DOM for elements of our component type and upgrades them
@@ -461,6 +461,16 @@ define(['./mdl/menu'], function (MaterialMenu) {
         classAsString: 'MaterialMenu',
         cssClass: 'mdl-js-menu',
         widget: true
+    });
+    componentHandler.register({
+        constructor: MaterialTextfield,
+        classAsString: 'MaterialTextfield',
+        cssClass: 'mdl-js-textfield',
+        widget: true
+    });
+    componentHandler.registerUpgradedCallback('MaterialTextfield', function(textfield) {
+        var input = $(textfield).find('.mdl-textfield__input');
+        if (input.data('required') != null) input.attr('required', true);
     });
     return componentHandler;
 });

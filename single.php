@@ -4,7 +4,6 @@
         <main class="main">
             <article class="article">
 				<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
-					<?php setPostViews( get_the_ID() ); ?>
                     <header class="article__header">
                         <h1 class="article__title"><?php the_title(); ?></h1>
 
@@ -19,7 +18,7 @@
                             <span class="time-to-read"><i
                                         class="material-icons">&#xE192;</i><span>Время на чтение:</span><span
                                         class="time"><?php echo estimated_reading_time(); ?></span></span>
-	                        <?php //get_template_part( '/includes/front/read_later' ); ?>
+	                        <?php get_template_part( '/includes/front/read_later' ); ?>
 							<?php get_template_part( '/includes/front/social_share_up' ); ?>
                         </div>
 
