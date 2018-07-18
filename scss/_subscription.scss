@@ -25,12 +25,13 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 9999;
-    transition: opacity .3s ease-in-out, visibility .3s ease-in-out, right .15s ease-in-out;;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out, right .15s ease-in-out;;
     box-shadow: 0 6px 16px 0 rgba(black, .15);
     opacity: 0;
     visibility: hidden;
     padding: 30px;
     &.show {
+      display: block;
       right: 75px;
       opacity: 1;
       visibility: visible;

@@ -1,6 +1,6 @@
 require(['vendor/jquery', 'vendor/flexmenu', './shady_header', 'vendor/mdl',
-        './set_count_post_view', './read_later'],
-    function ($, flexmenu, shadyHeader, mdl, set_count_post_view, read_later) {
+        './set_count_post_view', './read_later', './subscription'],
+    function ($, flexmenu, shadyHeader, mdl, set_count_post_view, read_later, subscription) {
         $.ajaxSetup({cache: false});
         //ServiceWorker
         // if ('serviceWorker' in navigator) {
@@ -14,6 +14,7 @@ require(['vendor/jquery', 'vendor/flexmenu', './shady_header', 'vendor/mdl',
             });
             set_count_post_view();
             read_later();
+            subscription();
         });
 
         $(document).on('mouseup touchend', function (e) {

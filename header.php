@@ -11,7 +11,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> style="padding-bottom: 100px;">
-<?php //get_template_part( '/includes/front/subscription'); ?>
+<?php get_template_part( '/includes/front/subscription'); ?>
 <div class="page-wrapper">
     <header class="yo-header">
         <div class="container">
