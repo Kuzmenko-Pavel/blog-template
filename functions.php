@@ -299,4 +299,3 @@ function my_load_plugin() {
 }
 
 ?>
-
