@@ -14,9 +14,11 @@
             ><?php the_title(); ?></a>
         </h2>
         <div class="article__excerpt">
-            <p>
+            <a href="<?php the_permalink(); ?>"title="<?php echo wp_strip_all_tags(get_the_excerpt());?>">
+                <p>
                 <?php echo wp_strip_all_tags(apply_filters( 'the_content', get_the_content( '')));?>
-            </p>
+                </p>
+            </a>
         </div>
 	    <?php get_template_part( '/includes/front/counters' ); ?>
 	    <?php get_template_part( '/includes/front/tags' ); ?>

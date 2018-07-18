@@ -5,7 +5,11 @@
 // 2. Prevent iOS and IE text size adjust after device orientation change,
 //    without disabling user zoom.
 //
-
+*{
+  margin:0px;
+  padding:0px;
+  text-decoration: none;
+}
 html {
   font-family: sans-serif; // 1
   -ms-text-size-adjust: 100%; // 2
@@ -98,6 +102,7 @@ a {
 a:active,
 a:hover {
   outline: 0;
+  text-decoration: none;
 }
 
 // Text-level semantics

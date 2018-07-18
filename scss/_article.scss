@@ -28,15 +28,19 @@
     width: calc(100% + 80px);
     max-width: calc(100% + 80px) !important;
     min-width: calc(100% + 80px);
-    margin: 1em -40px !important;
+    margin: 0 -40px !important;
     display: block;
-    height: auto;
     @include b(mobile) {
-      margin: 1em -15px !important;
+      margin: 0 -15px !important;
       width: calc(100% + 30px);
       max-width: calc(100% + 30px) !important;
       min-width: calc(100% + 30px);
     }
+  }
+  .wp-caption-text {
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
   }
   iframe {
     @extend .size-full;
@@ -78,13 +82,17 @@
     .views,
     .comments {
       margin-left: 23px;
-      border: 0;
+      border: none;
+      padding: 0;
       @include b(tablet) {
         margin-left: 15px;
       }
       span {
         vertical-align: baseline;
         top: 2px;
+      }
+      a{
+        border: none;
       }
     }
     .date {

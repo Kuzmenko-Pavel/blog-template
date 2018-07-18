@@ -8,9 +8,11 @@
         <span class="post_views" data-id="get_the_ID()"><?php echo getPostViews( get_the_ID() ); ?></span>
     </span>
 	<?php if ( comments_open() || get_comments_number() ) : ?>
-        <a href="<?php the_permalink(); ?>#comments" class="comments">
+    <span class="comments">
+        <a href="<?php the_permalink(); ?>#comments">
             <i class="material-icons">&#xE24C;</i>
             <span><?php comments_number( '0', '1', '%' ); ?></span>
         </a>
+    </span>
 	<?php endif; ?>
 </div>
