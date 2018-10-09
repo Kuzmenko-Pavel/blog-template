@@ -68,6 +68,9 @@ require(['vendor/jquery', 'vendor/flexmenu', './shady_header', 'vendor/mdl',
 
             window.wp.receiveEmbedMessage = function( e ) {
                 var data = e.data;
+                if (data === undefined || data === null){
+                    return;
+                }
                 if ( ! ( data.secret || data.message || data.value ) ) {
                     return;
                 }
